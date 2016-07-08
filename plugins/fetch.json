@@ -1,0 +1,29 @@
+{
+    "com.phonegap.plugins.OrientationLock": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cogitor/PhoneGap-OrientationLock.git",
+            "subdir": "."
+        }
+    },
+    "net.yoik.cordova.plugins.screenorientation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yoik/cordova-yoik-screenorientation",
+            "subdir": "."
+        }
+    },
+    "org.adlotto.cordova.recheck-screen-orientation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Adlotto/cordova-plugin-recheck-screen-orientation",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.inappbrowser"
+        }
+    }
+}
