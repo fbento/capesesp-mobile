@@ -6,7 +6,11 @@
     "config_munge": {
         "files": {}
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        }
+    },
     "dependent_plugins": {
         "com.phonegap.plugins.OrientationLock": {
             "PACKAGE_NAME": "com.capesesp.mobile"

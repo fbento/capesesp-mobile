@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -36,6 +40,9 @@
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         }
     },
@@ -75,12 +82,20 @@
             "clobbers": [
                 "window.open"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
         }
     ],
     "plugin_metadata": {
         "com.phonegap.plugins.OrientationLock": "0.1",
         "net.yoik.cordova.plugins.screenorientation": "1.3.2",
         "org.adlotto.cordova.recheck-screen-orientation": "0.1.0",
-        "org.apache.cordova.inappbrowser": "0.5.4"
+        "org.apache.cordova.inappbrowser": "0.5.4",
+        "cordova-plugin-device": "1.1.2"
     }
 }

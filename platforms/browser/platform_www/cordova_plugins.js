@@ -23,6 +23,20 @@ module.exports = [
         "clobbers": [
             "cordova.recheckScreenOrientation"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+        "id": "cordova-plugin-device.DeviceProxy",
+        "pluginId": "cordova-plugin-device",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -31,7 +45,8 @@ module.exports.metadata =
     "com.phonegap.plugins.OrientationLock": "0.1",
     "net.yoik.cordova.plugins.screenorientation": "1.3.2",
     "org.adlotto.cordova.recheck-screen-orientation": "0.1.0",
-    "org.apache.cordova.inappbrowser": "0.5.4"
+    "org.apache.cordova.inappbrowser": "0.5.4",
+    "cordova-plugin-device": "1.1.2"
 }
 // BOTTOM OF METADATA
 });
