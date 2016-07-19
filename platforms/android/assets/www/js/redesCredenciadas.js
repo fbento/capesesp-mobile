@@ -179,6 +179,7 @@ var redesCredenciadas = function () {
             $("#tipoServicoDiv").css("display", "block");
 
         configURLLogin.dadosEstados.cod_plano = plano;
+        // configURLLogin.dadosEstados.urg_emer = "n";
         configURLLogin.exibeTipoServico = exibeTipoServico;
         service.chamadaGenericaAjax(configURLLogin.urlEstados, configURLLogin.dadosEstados, retornoEstados);
     }
