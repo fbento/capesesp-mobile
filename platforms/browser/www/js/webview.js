@@ -6,6 +6,7 @@ function abrirWebview(titulo, url, usesLogin, back, titular, orientation) {
     localStorage.currentWebviewOrientation = orientation;
     localStorage.currentWebviewBack = back;
 
+    console.log("arara");
 
     if (usesLogin)
         authService.validarToken("webview.html",titular);
@@ -95,7 +96,7 @@ $(function () {
         abrirWebview(
             e.attr("data-webview-tittle"),
             e.attr("data-webview-url"),
-            //e.attr("data-webview-requires-login") != undefined,
+            e.attr("data-webview-requires-login") != undefined,
             e.attr("data-webview-back") != undefined,
             e.attr("data-webview-titular") != undefined,
             e.attr("data-webview-orientation"));

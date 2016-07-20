@@ -6,7 +6,6 @@ function abrirWebview(titulo, url, usesLogin, back, titular, orientation) {
     localStorage.currentWebviewOrientation = orientation;
     localStorage.currentWebviewBack = back;
 
-
     if (usesLogin)
         authService.validarToken("webview.html",titular);
     else

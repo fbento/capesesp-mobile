@@ -4,7 +4,7 @@ var apiBaseUrl = hostApi + "capesesp-apis/ws/";
 var urlRedeCredenciada = apiBaseUrl + "redecredenciada/";
 
 var configURLLogin = {
-	iframesBaseUrl: "https://servicos.capesesp.com.br/",
+	iframesBaseUrl: "https://servicosh.capesesp.com.br/",
 	url: apiBaseUrl + "json/login",
 	urlValidaToken: apiBaseUrl + "json/valida",
 	urlRecuperaInformacoes: apiBaseUrl + "informacoes/recupera",
