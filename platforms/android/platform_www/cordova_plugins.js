@@ -8,6 +8,21 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
+    },
+    {
         "file": "plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.js",
         "id": "net.yoik.cordova.plugins.screenorientation.screenorientation",
         "clobbers": [
@@ -27,30 +42,17 @@ module.exports = [
         "clobbers": [
             "cordova.recheckScreenOrientation"
         ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-        "id": "org.apache.cordova.inappbrowser.inappbrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "id": "cordova-plugin-device.device",
-        "clobbers": [
-            "device"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.phonegap.plugins.OrientationLock": "0.1",
+    "cordova-plugin-device": "1.1.2",
+    "cordova-plugin-inappbrowser": "1.4.0",
+    "cordova-plugin-whitelist": "1.2.3-dev",
     "net.yoik.cordova.plugins.screenorientation": "1.3.2",
-    "org.adlotto.cordova.recheck-screen-orientation": "0.1.0",
-    "org.apache.cordova.inappbrowser": "0.5.4",
-    "cordova-plugin-device": "1.1.2"
+    "org.adlotto.cordova.recheck-screen-orientation": "0.1.0"
 };
 // BOTTOM OF METADATA
 });

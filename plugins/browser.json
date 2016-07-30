@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
         }
     },
     "dependent_plugins": {

@@ -13,7 +13,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
                         {
@@ -21,7 +21,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -33,16 +37,19 @@
         "com.phonegap.plugins.OrientationLock": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
         "net.yoik.cordova.plugins.screenorientation": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "org.adlotto.cordova.recheck-screen-orientation": {
-            "PACKAGE_NAME": "com.capesesp.mobile"
-        },
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.capesesp.mobile"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         }
     },
@@ -53,6 +60,21 @@
             "id": "com.phonegap.plugins.OrientationLock.OrientationLock",
             "clobbers": [
                 "OrientationLock"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
             ]
         },
         {
@@ -75,27 +97,14 @@
             "clobbers": [
                 "cordova.recheckScreenOrientation"
             ]
-        },
-        {
-            "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-            "id": "org.apache.cordova.inappbrowser.inappbrowser",
-            "clobbers": [
-                "window.open"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
-            "clobbers": [
-                "device"
-            ]
         }
     ],
     "plugin_metadata": {
         "com.phonegap.plugins.OrientationLock": "0.1",
+        "cordova-plugin-device": "1.1.2",
+        "cordova-plugin-inappbrowser": "1.4.0",
+        "cordova-plugin-whitelist": "1.2.3-dev",
         "net.yoik.cordova.plugins.screenorientation": "1.3.2",
-        "org.adlotto.cordova.recheck-screen-orientation": "0.1.0",
-        "org.apache.cordova.inappbrowser": "0.5.4",
-        "cordova-plugin-device": "1.1.2"
+        "org.adlotto.cordova.recheck-screen-orientation": "0.1.0"
     }
 }

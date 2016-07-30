@@ -7,12 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.phonegap.plugins.OrientationLock": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.capesesp.mobile"
-        }
-    },
-    "dependent_plugins": {
-        "com.phonegap.plugins.OrientationLock": {
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "net.yoik.cordova.plugins.screenorientation": {
@@ -20,9 +24,7 @@
         },
         "org.adlotto.cordova.recheck-screen-orientation": {
             "PACKAGE_NAME": "com.capesesp.mobile"
-        },
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.capesesp.mobile"
         }
-    }
+    },
+    "dependent_plugins": {}
 }
