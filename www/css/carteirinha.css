@@ -52,22 +52,37 @@
       margin-bottom: 7.6%; }
     #carteirinha__verso .carteirinha__verso--dados#mat_usuario {
       width: 21.6%;
-      margin-bottom: 4.8%; }
+      margin-bottom: 5.3%; }
     #carteirinha__verso .carteirinha__verso--dados#nasc_usuario {
       width: 19.5%;
-      margin-bottom: 4.8%; }
+      margin-bottom: 5.3%; }
     #carteirinha__verso .carteirinha__verso--dados#vinculo_usuario {
       width: 19.5%;
-      margin-bottom: 4.8%; }
+      margin-bottom: 5.3%; }
     #carteirinha__verso .carteirinha__verso--dados#uf_usuario {
-      width: 19.5%;
-      margin-bottom: 4.8%; }
+      width: 9.8%;
+      margin-bottom: 5.3%; }
     #carteirinha__verso .carteirinha__verso--dados#plano_usuario {
       width: 72.5%;
-      margin-bottom: 4.8%; }
+      margin-bottom: 5.5%; }
     #carteirinha__verso .carteirinha__verso--dados#acomodacao_usuario {
       width: 27%;
-      margin-bottom: 4.8%; }
+      margin-bottom: 5.5%; }
+    #carteirinha__verso .carteirinha__verso--dados#contrato {
+      width: 40.9%;
+      margin-bottom: 5%; }
+    #carteirinha__verso .carteirinha__verso--dados#abrangencia {
+      width: 30.8%;
+      margin-bottom: 5%; }
+    #carteirinha__verso .carteirinha__verso--dados#registro_ans {
+      width: 25%;
+      margin-bottom: 5%; }
+    #carteirinha__verso .carteirinha__verso--dados#cobertura {
+      width: 72.5%;
+      margin-bottom: 5%; }
+    #carteirinha__verso .carteirinha__verso--dados#validade {
+      width: 25%;
+      margin-bottom: 5%; }
     #carteirinha__verso .carteirinha__verso--dados#observacoes {
       position: absolute;
       bottom: 5%;

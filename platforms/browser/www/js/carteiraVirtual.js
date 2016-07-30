@@ -56,16 +56,21 @@ var carteiraVirtual = function() {
 
         $(".header-carteirinha").hide();
         $(".carteira_lista_detalhe").css("margin-top", "12.65%");
-        //$("#pagetwo").css("margin-top","2em");
-        $("#nome_usuario").text(responseParam.nome);
-        $("#mat_usuario").text(responseParam.matricula.toString());
-        $("#vinculo_usuario").text(responseParam.vinculo);
-        $("#plano_usuario").text(responseParam.plano);
-        $("#nasc_usuario").text(responseParam.data_nascimento);
-        $("#acomadacao_usuario").text(responseParam.acomodacao);
-        $("#uf_usuario").text(responseParam.uf);
+        $("#nome_usuario").text(responseParam.associado.nome);
+        $("#mat_usuario").text(responseParam.associado.matricula.toString());
+        $("#vinculo_usuario").text(responseParam.plano.vinculo);
+        $("#uf_usuario").text(responseParam.plano.uf); 
+        $("#cns").text(responseParam.associado.cns);
+        $("#plano_usuario").text(responseParam.plano.descricaoProduto);
+        $("#nasc_usuario").text(responseParam.associado.dataNascimento);
+        $("#acomodacao_usuario").text(responseParam.plano.acomodacao);
+        $("#contrato").text(responseParam.plano.contrato);
+        $("#abrangencia").text(responseParam.plano.abrangencia);
+        $("#registro_ans").text(responseParam.plano.registroANS);
+        $("#cobertura").text(responseParam.plano.cobertura);
+        $("#validade").text(responseParam.plano.validade);
         $("#observacoes").children().remove();
-        $.each(responseParam.mensagens_carteira, function(j, item) {
+        $.each(responseParam.plano.mensagensCarencia, function(j, item) {
             var text = $("<h1 style='font-size:15px;'></h1>").text(item.mensagem);
             $("#observacoes").append(text);
         });
@@ -82,7 +87,7 @@ var carteiraVirtual = function() {
     //};
 
     var init = function() {
-        $("#pagetwo, #carteirinhaverso").click(function() {
+        $("#pagetwo, #carteirinha__frente, carteirinha__verso").click(function() {
             var header = $(".header-carteirinha"),
                 detalheCarteira = $(".carteira_lista_detalhe");
             header.toggle();
@@ -100,6 +105,9 @@ var carteiraVirtual = function() {
         carteirinha_frente.show();
         showBackButton.show();
         showBackButton.click(function() {
+            setTimeout(function(){
+                $(".header-carteirinha").hide();
+            },100);
             carteirinha_frente.hide();
             showBackButton.hide();
         })

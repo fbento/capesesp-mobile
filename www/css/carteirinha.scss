@@ -63,8 +63,10 @@
     .carteirinha__verso--dados {
         // Settings
         $row-1-margin: 7.6%;
-        $row-2-margin: 4.8%;
-        $row-3-margin: 4.8%;
+        $row-2-margin: 5.3%;
+        $row-3-margin: 5.5%;
+        $row-4-margin: 5%;
+        $row-5-margin: 5%;
         // Common Styles
         display: inline-block;
         vertical-align: text-top;
@@ -87,7 +89,7 @@
             margin-bottom: $row-2-margin;
         }
         &#uf_usuario {
-            width: 19.5%;
+            width: 9.8%;
             margin-bottom: $row-2-margin;
         }
         // Row 3
@@ -99,6 +101,29 @@
             width: 27%;
             margin-bottom: $row-3-margin;
         }
+        // Row 4
+        &#contrato {
+            width: 40.9%;
+            margin-bottom: $row-4-margin;
+        }
+        &#abrangencia {
+            width: 30.8%;
+            margin-bottom: $row-4-margin;
+        }
+        &#registro_ans {
+            width: 25%;
+            margin-bottom: $row-4-margin;
+        }
+        // Row 5
+        &#cobertura {
+            width: 72.5%;
+            margin-bottom: $row-5-margin;
+        }
+        &#validade {
+            width: 25%;
+            margin-bottom: $row-5-margin;
+        }
+
         //Obs
         &#observacoes {
             position: absolute;
