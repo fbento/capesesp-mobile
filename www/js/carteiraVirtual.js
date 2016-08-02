@@ -100,6 +100,13 @@ var carteiraVirtual = function() {
             }
         });
 
+        var carteirinha_img = $("carteirinha__frente--img");
+
+        carteirinha_img.each(function(){
+            if(this.hasClass(responseParam.plano.abrangencia.toLowerCase))
+                this.removeAttribute("hide");
+        });
+
         var showBackButton = $("#pagetwo #carteirinha__frente--action");
         var carteirinha_frente = $("#pagetwo #carteirinha__frente");
         carteirinha_frente.show();
