@@ -59,7 +59,7 @@ var carteiraVirtual = function() {
         $("#nome_usuario").text(responseParam.associado.nome);
         $("#mat_usuario").text(responseParam.associado.matricula.toString());
         $("#vinculo_usuario").text(responseParam.plano.vinculo);
-        $("#uf_usuario").text(responseParam.plano.uf); 
+        $("#uf_usuario").text(responseParam.plano.uf);
         $("#cns").text(responseParam.associado.cns);
         $("#plano_usuario").text(responseParam.plano.descricaoProduto);
         $("#nasc_usuario").text(responseParam.associado.dataNascimento);
@@ -74,6 +74,20 @@ var carteiraVirtual = function() {
             var text = $("<h1 style='font-size:15px;'></h1>").text(item.mensagem);
             $("#observacoes").append(text);
         });
+        var carteirinha_img = $(".carteirinha__frente--img");
+        var carteirinha_frente = $("#pagetwo #carteirinha__frente");
+        var showBackButton = $("#pagetwo #carteirinha__frente--action");
+
+        carteirinha_frente.show();
+        showBackButton.show();
+        $(carteirinha_img).attr("hide", "");
+
+        carteirinha_img.each(function() {
+            var carteirinha_tipo = responseParam.plano.abrangencia.replace(/ /g, '').toLowerCase();
+            if ($(this).hasClass(carteirinha_tipo)) {
+                $(this).removeAttr("hide");
+            }
+        });
     };
     //
     //var flipCarteira = function (verso) {
@@ -87,6 +101,10 @@ var carteiraVirtual = function() {
     //};
 
     var init = function() {
+        var carteirinha_img = $(".carteirinha__frente--img");
+        var carteirinha_frente = $("#pagetwo #carteirinha__frente");
+        var showBackButton = $("#pagetwo #carteirinha__frente--action");
+
         $("#pagetwo, #carteirinha__frente, carteirinha__verso").click(function() {
             var header = $(".header-carteirinha"),
                 detalheCarteira = $(".carteira_lista_detalhe");
@@ -100,14 +118,25 @@ var carteiraVirtual = function() {
             }
         });
 
-        var showBackButton = $("#pagetwo #carteirinha__frente--action");
-        var carteirinha_frente = $("#pagetwo #carteirinha__frente");
+        $("#carteirinha__verso").click(function() {
+            if (carteirinha_frente.css("display") == "none") {
+                carteirinha_frente.show();
+                showBackButton.show();
+                setTimeout(function() {
+                    $(".header-carteirinha").show();
+                }, 100);
+            } else {
+                carteirinha_frente.hide();
+                showBackButton.hide();
+            }
+        });
+
         carteirinha_frente.show();
         showBackButton.show();
         showBackButton.click(function() {
-            setTimeout(function(){
+            setTimeout(function() {
                 $(".header-carteirinha").hide();
-            },100);
+            }, 100);
             carteirinha_frente.hide();
             showBackButton.hide();
         })

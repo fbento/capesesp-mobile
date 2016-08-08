@@ -16,10 +16,10 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
-        "net.yoik.cordova.plugins.screenorientation": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "org.adlotto.cordova.recheck-screen-orientation": {

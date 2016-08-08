@@ -10,12 +10,12 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="YoikScreenOrientation">
+        <param name="android-package" value="net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation" />
+    </feature>
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
-    </feature>
-    <feature name="YoikScreenOrientation">
-        <param name="android-package" value="net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation" />
     </feature>
     <name>Capesesp</name>
     <description>
@@ -44,13 +44,13 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
     <preference name="splashscreen" value="splash" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="net.yoik.cordova.plugins.screenorientation" version="1.3.1" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-device-orientation" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-plugin-screen-orientation" source="npm" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>102</string>

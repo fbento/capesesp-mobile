@@ -23,15 +23,15 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.js",
-        "id": "net.yoik.cordova.plugins.screenorientation.screenorientation",
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation",
         "clobbers": [
             "cordova.plugins.screenorientation"
         ]
     },
     {
-        "file": "plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.android.js",
-        "id": "net.yoik.cordova.plugins.screenorientation.screenorientation.android",
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.android.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation.android",
         "merges": [
             "cordova.plugins.screenorientation"
         ]
@@ -50,8 +50,8 @@ module.exports.metadata =
     "com.phonegap.plugins.OrientationLock": "0.1",
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-inappbrowser": "1.4.0",
+    "cordova-plugin-screen-orientation": "1.4.2",
     "cordova-plugin-whitelist": "1.2.3-dev",
-    "net.yoik.cordova.plugins.screenorientation": "1.3.2",
     "org.adlotto.cordova.recheck-screen-orientation": "0.1.0"
 };
 // BOTTOM OF METADATA

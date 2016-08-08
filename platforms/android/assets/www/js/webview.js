@@ -12,6 +12,7 @@ function abrirWebview(titulo, url, usesLogin, back, titular, orientation) {
     {
         $.mobile.loading("show");
         var urlIframe = configURLLogin.iframesBaseUrl + localStorage.currentWebviewUrl;
+        console.log(urlIframe); 
         $.get(urlIframe).success(function(){
             window.location.href = "webview.html";
         }).error(function(){
