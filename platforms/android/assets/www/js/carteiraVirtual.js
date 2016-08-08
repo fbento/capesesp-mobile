@@ -118,6 +118,7 @@ var carteiraVirtual = function() {
             }
         });
 
+<<<<<<< HEAD
         $("#carteirinha__verso").click(function() {
             if (carteirinha_frente.css("display") == "none") {
                 carteirinha_frente.show();
@@ -131,6 +132,17 @@ var carteiraVirtual = function() {
             }
         });
 
+=======
+        var carteirinha_img = $("carteirinha__frente--img");
+
+        carteirinha_img.each(function(){
+            if(this.hasClass(responseParam.plano.abrangencia.toLowerCase))
+                this.removeAttribute("hide");
+        });
+
+        var showBackButton = $("#pagetwo #carteirinha__frente--action");
+        var carteirinha_frente = $("#pagetwo #carteirinha__frente");
+>>>>>>> ab5730c925252f4755bcf47e06a09a7d98df71f0
         carteirinha_frente.show();
         showBackButton.show();
         showBackButton.click(function() {
