@@ -22,6 +22,9 @@ var carteiraVirtual = function() {
     var retornoGrupoFamiliar = function(responseParam) {
         var listaBen = responseParam.grupo_familiar.beneficiarios;
 
+        $("#pageone .backBtn").hide();
+        $("#pageone .homeBtn").show();
+        
         $.each(listaBen, function(i, item) {
             var text = $("<li><a href='#' id='link" + i + "'></a></li>");
             if (i == 0)
@@ -31,10 +34,52 @@ var carteiraVirtual = function() {
 
             $("#carteira_lista_ul").append(text);
             $("#link" + i).text(item.beneficiario.nome).click(function() {
-                listarDetalhesCarteira(item.beneficiario.seq)
+                //listarDetalhesCarteira(item.beneficiario.seq)
+                listarTipoCarteira(item.beneficiario.seq)
             }).addClass("ui-btn ui-btn-icon-right ui-icon-carat-r");
         });
     };
+
+    //======================================================================================================================
+    //======================================================================================================================
+    //======================================================================================================================
+    var listarTipoCarteira = function(sequencial) {
+        $("#label_cart_list_ul").text("Selecione o Plano:");
+        var storage = window.sessionStorage;
+        storage.setItem("carteira-sequencial", sequencial);
+        configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
+        configURLLogin.dadosCarteira.token = storage.getItem("token");
+        configURLLogin.dadosCarteira.sequencial = sequencial;
+        //Request
+        service.chamadaGenericaAjax(configURLLogin.urlTipoCarteira, configURLLogin.dadosCarteira, retornoTipoCarteira);
+    };
+
+    var retornoTipoCarteira = function(responseParam) {
+        var planList = responseParam.planos;
+        var storage = window.sessionStorage;
+        var sequencial = storage.getItem("carteira-sequencial");
+
+        $("#carteira_lista_ul").html("");
+        $("#pageone .backBtn").show();
+        $("#pageone .homeBtn").hide();
+        $.each(planList, function(i, item) {
+            var text = $("<li><a href='#' id='link" + i + "'></a></li>");
+            if (i == 0)
+                text.addClass("ui-first-child");
+            else if (i == planList.length - 1)
+                text.addClass("ui-last-child");
+            $("#carteira_lista_ul").append(text);
+            $("#link" + i).text(item.descricaoPlano.toUpperCase()).click(function() {
+                storage.setItem("carteira-tipo", item.codigoCarteira);
+                listarDetalhesCarteira(sequencial)
+                //listarTipoCarteira(sequencial)
+            }).addClass("ui-btn ui-btn-icon-right ui-icon-carat-r");
+        });
+    };
+    //======================================================================================================================
+    //======================================================================================================================
+    //======================================================================================================================
+
 
     var listarDetalhesCarteira = function(sequencial) {
         var storage = window.sessionStorage;
@@ -47,7 +92,8 @@ var carteiraVirtual = function() {
 
 
     var retornoDetalheCarteira = function(responseParam) {
-        console.log(responseParam);
+        var storage = window.sessionStorage;
+        var planType = storage.getItem("carteira-tipo");
 
         SetOrientation('landscape');
         $.mobile.changePage("carteira_virtual.html#pagetwo", { transition: "pop", changeHash: false });
@@ -83,8 +129,8 @@ var carteiraVirtual = function() {
         $(carteirinha_img).attr("hide", "");
 
         carteirinha_img.each(function() {
-            var carteirinha_tipo = responseParam.plano.abrangencia.replace(/ /g, '').toLowerCase();
-            if ($(this).hasClass(carteirinha_tipo)) {
+            //var carteirinha_tipo = responseParam.plano.abrangencia.replace(/ /g, '').toLowerCase();
+            if ($(this).hasClass(planType)) {
                 $(this).removeAttr("hide");
             }
         });

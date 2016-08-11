@@ -19,28 +19,10 @@
 <body>
     <div data-role="page" id="pageone" data-theme="a" data-content-theme="b">
         <div data-role="header" class="banner-capesesp">
-            <a class="ui-btn-left anchor-capesesp" onclick='window.location.href="index.html#pageone"'>
-                <span class="ui-icon-home ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
+            <a class="ui-btn-left anchor-capesesp backBtn" onclick="carteiraCtrl.listarGrupoFamiliar()" style="display:none">
+                <span class="ui-icon-back ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
             </a>
-            <span class="ui-title">Carteirinha Virtual</span>
-        </div>
-        <div id="menu_carteira_lista">
-        </div>
-        <div id="menu_carteira_det" style="display: none">
-            <div>
-            </div>
-        </div>
-        <div data-role="main" class="ui-content ui-responsive ">
-            <div class="ui-grid-solo" id="carteira_virtual">
-                <label style="color:black;font-size:small;text-align: left; font-weight: bold " for="carteira_lista_ul" id="label_cart_list_ul"></label>
-                <ul data-role="listview" data-inset="true" class="ui-alt-icon" id="carteira_lista_ul">
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div data-role="page" id="pageoneandahalf" data-theme="a" data-content-theme="b">
-        <div data-role="header" class="banner-capesesp">
-            <a class="ui-btn-left anchor-capesesp" onclick='window.location.href="index.html#pageone"'>
+            <a class="ui-btn-left anchor-capesesp homeBtn" onclick='window.location.href="index.html#pageone"'>
                 <span class="ui-icon-home ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
             </a>
             <span class="ui-title">Carteirinha Virtual</span>
@@ -68,7 +50,7 @@
         </div>
         <div id="carteirinha__frente">
             <img class="carteirinha__frente--img nacional" hide src="images/carteira_nacional.png" alt="" />
-            <img class="carteirinha__frente--img grupodeestados" hide src="images/carteira_regional.png" alt="" />
+            <img class="carteirinha__frente--img regional" hide src="images/carteira_regional.png" alt="" />
             <img class="carteirinha__frente--img odontologico" hide src="images/carteira_odonto.png" alt="" />
             <div id="carteirinha__frente--action">Toque aqui para ver o verso</div>
         </div>

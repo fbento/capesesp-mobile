@@ -10,6 +10,7 @@ var configURLLogin = {
     urlRecuperaInformacoes: apiBaseUrl + "informacoes/recupera",
     urlGrupoFamiliar: apiBaseUrl + "carteira/listar",
     urlDetalhesCarteira: apiBaseUrl + "carteira/recupera",
+    urlTipoCarteira: apiBaseUrl + "carteira/listarTipo",
     urlPlanos: urlRedeCredenciada + "planos",
     urlEstados: urlRedeCredenciada + "estados",
     urlMunicipios: urlRedeCredenciada + "municipios",

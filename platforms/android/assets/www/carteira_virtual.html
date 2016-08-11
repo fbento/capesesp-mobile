@@ -19,7 +19,10 @@
 <body>
     <div data-role="page" id="pageone" data-theme="a" data-content-theme="b">
         <div data-role="header" class="banner-capesesp">
-            <a class="ui-btn-left anchor-capesesp" onclick='window.location.href="index.html#pageone"'>
+            <a class="ui-btn-left anchor-capesesp backBtn" onclick="carteiraCtrl.backCarteira()" style="display:none">
+                <span class="ui-icon-back ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
+            </a>
+            <a class="ui-btn-left anchor-capesesp homeBtn" onclick='window.location.href="index.html#pageone"'>
                 <span class="ui-icon-home ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
             </a>
             <span class="ui-title">Carteirinha Virtual</span>
@@ -47,7 +50,7 @@
         </div>
         <div id="carteirinha__frente">
             <img class="carteirinha__frente--img nacional" hide src="images/carteira_nacional.png" alt="" />
-            <img class="carteirinha__frente--img grupodeestados" hide src="images/carteira_regional.png" alt="" />
+            <img class="carteirinha__frente--img regional" hide src="images/carteira_regional.png" alt="" />
             <img class="carteirinha__frente--img odontologico" hide src="images/carteira_odonto.png" alt="" />
             <div id="carteirinha__frente--action">Toque aqui para ver o verso</div>
         </div>
