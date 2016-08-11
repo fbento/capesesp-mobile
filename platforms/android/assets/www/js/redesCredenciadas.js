@@ -424,7 +424,7 @@ var redesCredenciadas = function() {
         dadosListaCredenciados.urgEmer = configURLLogin.dadosEstados.urgEmer;
         dadosListaCredenciados.siglaEstado = configURLLogin.dadosMunicipio.siglaEstado;
         dadosListaCredenciados.descMunicipio = configURLLogin.dadosTipoServico.descMunicipio;
-        dadosListaCredenciados.descBairro = semBairro ? "" : $("#bairro").val();
+        dadosListaCredenciados.descBairro = semBairro ? "" : $("#bairro").val().toUpperCase();
         dadosListaCredenciados.codModalidade = configURLLogin.dadosServicos.codModalidade;
         dadosListaCredenciados.nomePrestador = $("#prestador").val();
         service.chamadaGenericaAjax(configURLLogin.urlListaCredenciados, dadosListaCredenciados, retornoListaCredenciados);
@@ -432,9 +432,10 @@ var redesCredenciadas = function() {
 
 
     function retornoListaCredenciados(responseParam) {
+        window.localStorage.setItem("buscaBairroSemOcorrencia", "false");
         if (responseParam.credenciados.length == 0 && dadosListaCredenciados.descBairro) {
             window.localStorage.setItem("buscaBairroSemOcorrencia", "true");
-            listarCredenciados();
+            listarCredenciados(true);
             return;
         }
         if (responseParam)
@@ -444,7 +445,7 @@ var redesCredenciadas = function() {
         $.mobile.changePage("#credeciadosList");
         $("#lista-wrapper").children().remove();
         var buscaBairroSemOcorrencia = window.localStorage.getItem("buscaBairroSemOcorrencia");
-        if (buscaBairroSemOcorrencia && responseParam.credenciados.length > 0) {
+        if (buscaBairroSemOcorrencia == "true" && responseParam.credenciados.length > 0) {
             window.localStorage.removeItem("buscaBairroSemOcorrencia");
             var errorMsgsssss = "<h1 style='color:black;font-size:medium;text-align: center'>A busca pelo bairro " + $("#bairro").val() + " não retornou nenhum resultado válido. Seguem os demais prestadores de serviços do município especificado.</h1>";
             $("#lista-wrapper").append(errorMsgsssss)

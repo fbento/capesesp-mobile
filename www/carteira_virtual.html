@@ -38,6 +38,27 @@
             </div>
         </div>
     </div>
+    <div data-role="page" id="pageoneandahalf" data-theme="a" data-content-theme="b">
+        <div data-role="header" class="banner-capesesp">
+            <a class="ui-btn-left anchor-capesesp" onclick='window.location.href="index.html#pageone"'>
+                <span class="ui-icon-home ui-btn-icon-left ui-custom-capesesp">&nbsp;</span>
+            </a>
+            <span class="ui-title">Carteirinha Virtual</span>
+        </div>
+        <div id="menu_carteira_lista">
+        </div>
+        <div id="menu_carteira_det" style="display: none">
+            <div>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content ui-responsive ">
+            <div class="ui-grid-solo" id="carteira_virtual">
+                <label style="color:black;font-size:small;text-align: left; font-weight: bold " for="carteira_lista_ul" id="label_cart_list_ul"></label>
+                <ul data-role="listview" data-inset="true" class="ui-alt-icon" id="carteira_lista_ul">
+                </ul>
+            </div>
+        </div>
+    </div>
     <div data-role="page" id="pagetwo" data-theme="a" data-content-theme="b" class="carteirinhaFundo">
         <div data-role="header" data-transition="pop" class="banner-capesesp header-carteirinha">
             <a class="ui-btn-left anchor-capesesp" onclick="carteiraCtrl.backCarteira()">

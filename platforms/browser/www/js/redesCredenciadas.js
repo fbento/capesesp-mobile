@@ -689,11 +689,11 @@ var redesCredenciadas = function() {
     function retornoEndereco(responseParam) {
         if (responseParam.statusExecucao.executadoCorretamente) {
             var pos = responseParam.posicionamento.endereco;
-            $("#estadoList").val(pos.estado.codigo).selectmenu('refresh', true);
+            $("#estadoList").val(pos.estado.sigla).selectmenu('refresh', true);
             $("#estadoList").change(function() {
-                dadosListaCredenciados.siglaEstado = pos.estado.codigo;
-                dadosListaCredenciados.descMunicipio = pos.municipio.codigo;
-                dadosListaCredenciados.descBairro = pos.bairro.descricao;
+                dadosListaCredenciados.siglaEstado = pos.estado.sigla;
+                dadosListaCredenciados.descMunicipio = pos.municipio;
+                dadosListaCredenciados.descBairro = pos.bairro;
             });
             $("#estadoList").trigger("change");
         } else
