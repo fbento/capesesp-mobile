@@ -40,7 +40,7 @@ var carteiraVirtual = function() {
         var storage = window.sessionStorage;
         configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
         configURLLogin.dadosCarteira.token = storage.getItem("token");
-
+        // registroans
         configURLLogin.dadosCarteira.sequencial = sequencial;
         service.chamadaGenericaAjax(configURLLogin.urlDetalhesCarteira, configURLLogin.dadosCarteira, retornoDetalheCarteira);
     };
