@@ -346,14 +346,17 @@ var redesCredenciadas = function() {
         else
             $(".esp-servico").css("display", "none");
         if (isServicoSelected() || !configURLLogin.exibeTipoServico) {
-            $(prosseguir2).show().focus().unbind('click').click(function() {
+            $(prosseguir2).focus().unbind('click').click(function() {
 
                 AtivarTab(3, []);
+
                 $("#botaoBusca").show();
+
                 $("#botaoBusca").unbind('click').click(function() {
                     listarCredenciados();
                 });
             })
+
         }
     }
 
@@ -401,7 +404,11 @@ var redesCredenciadas = function() {
     function selecionarEspecialidade(param) {
         var x = $("#tipoServicoDiv");
 
-        if ((x.css("display") == "block" && $("#tiposervicoList").find("option:selected").val() == "0") || $("#servicoList option:selected").val() == "0")
+        if (param != "0") {
+            $("#prosseguir2").show();
+        }
+
+        if ((x.css("display") == "block" && $("#tiposervicoList").find("option:selected").val() == "0") || $("#servicoList option:selected").val() == "0" || $(".esp-servico").css("display") == "none")
             return;
 
         $("#botaoBusca").unbind('click').click(function() {
@@ -543,7 +550,10 @@ var redesCredenciadas = function() {
         }
         $("#nome").text(testaNulo(responseParam.credenciados.nomeFantasia));
         if ($("#nome").text() == "") {
-            RemoveTableRow($("#nome"));
+            $("#nome").text(testaNulo(responseParam.credenciados.razaoSocial));
+            if ($("#nome").text() == "") {
+                RemoveTableRow($("#nome"));
+            }
         }
         $("#crm").html(testaNulo(responseParam.credenciados.registroConselho.descricao) + " " + testaNulo(responseParam.credenciados.registroConselho.registro) + "<span style='color:white !important'>.</span>");
         if ($("#crm").text() == "") {
@@ -609,7 +619,7 @@ var redesCredenciadas = function() {
         $("#lng").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lng));
         $("#imgQualifi").children().remove();
         $.each(responseParam.credenciados.qualificacao, function(j, obj) {
-            var qualif = $("<img src='img/" + obj.cod_entidade + ".png' alt='Home' width='18' height='20'>");
+            var qualif = $("<img src='img/" + obj.codEntidade + ".png' alt='Home' width='18' height='20'>");
             $("#imgQualifi").append(qualif);
         });
     }

@@ -24,7 +24,7 @@ var carteiraVirtual = function() {
 
         $("#pageone .backBtn").hide();
         $("#pageone .homeBtn").show();
-        
+
         $.each(listaBen, function(i, item) {
             var text = $("<li><a href='#' id='link" + i + "'></a></li>");
             if (i == 0)
@@ -34,8 +34,7 @@ var carteiraVirtual = function() {
 
             $("#carteira_lista_ul").append(text);
             $("#link" + i).text(item.beneficiario.nome).click(function() {
-                //listarDetalhesCarteira(item.beneficiario.seq)
-                listarTipoCarteira(item.beneficiario.seq)
+                listarTipoCarteira(item.beneficiario.seq);
             }).addClass("ui-btn ui-btn-icon-right ui-icon-carat-r");
         });
     };
@@ -71,8 +70,8 @@ var carteiraVirtual = function() {
             $("#carteira_lista_ul").append(text);
             $("#link" + i).text(item.descricaoPlano.toUpperCase()).click(function() {
                 storage.setItem("carteira-tipo", item.codigoCarteira);
-                listarDetalhesCarteira(sequencial)
-                //listarTipoCarteira(sequencial)
+                storage.setItem("carteira-registroANS", item.registroPlanoAns);
+                listarDetalhesCarteira(sequencial);
             }).addClass("ui-btn ui-btn-icon-right ui-icon-carat-r");
         });
     };
@@ -85,7 +84,7 @@ var carteiraVirtual = function() {
         var storage = window.sessionStorage;
         configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
         configURLLogin.dadosCarteira.token = storage.getItem("token");
-        // registroans
+        configURLLogin.dadosCarteira.codAns = storage.getItem("carteira-registroANS");
         configURLLogin.dadosCarteira.sequencial = sequencial;
         service.chamadaGenericaAjax(configURLLogin.urlDetalhesCarteira, configURLLogin.dadosCarteira, retornoDetalheCarteira);
     };
@@ -94,6 +93,7 @@ var carteiraVirtual = function() {
     var retornoDetalheCarteira = function(responseParam) {
         var storage = window.sessionStorage;
         var planType = storage.getItem("carteira-tipo");
+        var planANSCode = storage.getItem("carteira-registroANS");
 
         SetOrientation('landscape');
         $.mobile.changePage("carteira_virtual.html#pagetwo", { transition: "pop", changeHash: false });
@@ -112,7 +112,7 @@ var carteiraVirtual = function() {
         $("#acomodacao_usuario").text(responseParam.plano.acomodacao);
         $("#contrato").text(responseParam.plano.contrato);
         $("#abrangencia").text(responseParam.plano.abrangencia);
-        $("#registro_ans").text(responseParam.plano.registroANS);
+        $("#registro_ans").text(planANSCode);
         $("#cobertura").text(responseParam.plano.cobertura);
         $("#validade").text(responseParam.plano.validade);
         $("#observacoes").children().remove();

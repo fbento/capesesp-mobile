@@ -349,11 +349,14 @@ var redesCredenciadas = function() {
             $(prosseguir2).show().focus().unbind('click').click(function() {
 
                 AtivarTab(3, []);
+
                 $("#botaoBusca").show();
+
                 $("#botaoBusca").unbind('click').click(function() {
                     listarCredenciados();
                 });
             })
+
         }
     }
 
@@ -401,7 +404,11 @@ var redesCredenciadas = function() {
     function selecionarEspecialidade(param) {
         var x = $("#tipoServicoDiv");
 
-        if ((x.css("display") == "block" && $("#tiposervicoList").find("option:selected").val() == "0") || $("#servicoList option:selected").val() == "0")
+        if (param != "0") {
+            $("#prosseguir2").show();
+        }
+
+        if ((x.css("display") == "block" && $("#tiposervicoList").find("option:selected").val() == "0") || $("#servicoList option:selected").val() == "0" || $(".esp-servico").css("display") == "none")
             return;
 
         $("#botaoBusca").unbind('click').click(function() {

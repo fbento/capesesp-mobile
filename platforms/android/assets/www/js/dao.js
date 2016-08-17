@@ -25,7 +25,7 @@ var configURLLogin = {
     dadosValidaToken: { "token": "" },
     dadosEstados: { "codAns": "" },
     exibeTipoServico: false,
-    dadosCarteira: { "matricula": "", "sequencial": 1, "token": "" },
+    dadosCarteira: { "matricula": "", "sequencial": 1, "token": "", "codAns": 0 },
     dadosGrupoFamiliar: { "matricula": "", "token": "" },
     dadosMunicipio: { "siglaEstado": "", "codAns": "", "urgEmer": "" },
     dadosTipoServico: { "descMunicipio": "", "siglaEstado": "", "codAns": "", "urgEmer": "" },

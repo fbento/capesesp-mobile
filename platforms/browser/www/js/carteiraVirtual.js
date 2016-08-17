@@ -46,11 +46,11 @@ var carteiraVirtual = function() {
         $("#label_cart_list_ul").text("Selecione o Plano:");
         var storage = window.sessionStorage;
         storage.setItem("carteira-sequencial", sequencial);
-        configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
-        configURLLogin.dadosCarteira.token = storage.getItem("token");
-        configURLLogin.dadosCarteira.sequencial = sequencial;
+        configURLLogin.dadosTipoCarteira.matricula = storage.getItem("matricula");
+        configURLLogin.dadosTipoCarteira.token = storage.getItem("token");
+        configURLLogin.dadosTipoCarteira.sequencial = sequencial;
         //Request
-        service.chamadaGenericaAjax(configURLLogin.urlTipoCarteira, configURLLogin.dadosCarteira, retornoTipoCarteira);
+        service.chamadaGenericaAjax(configURLLogin.urlTipoCarteira, configURLLogin.dadosTipoCarteira, retornoTipoCarteira);
     };
 
     var retornoTipoCarteira = function(responseParam) {
@@ -84,7 +84,7 @@ var carteiraVirtual = function() {
         var storage = window.sessionStorage;
         configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
         configURLLogin.dadosCarteira.token = storage.getItem("token");
-        // registroans
+        configURLLogin.dadosCarteira.codAns = storage.getItem("carteira-registroANS");
         configURLLogin.dadosCarteira.sequencial = sequencial;
         service.chamadaGenericaAjax(configURLLogin.urlDetalhesCarteira, configURLLogin.dadosCarteira, retornoDetalheCarteira);
     };
