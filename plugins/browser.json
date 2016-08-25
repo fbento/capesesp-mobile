@@ -24,6 +24,12 @@
         },
         "org.adlotto.cordova.recheck-screen-orientation": {
             "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-fullscreen": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
         }
     },
     "dependent_plugins": {}

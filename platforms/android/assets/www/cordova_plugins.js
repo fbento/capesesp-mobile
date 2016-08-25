@@ -15,6 +15,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+        "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+        "clobbers": [
+            "AndroidFullScreen"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
         "id": "cordova-plugin-inappbrowser.inappbrowser",
         "clobbers": [
@@ -37,6 +44,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "id": "cordova-plugin-statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
         "file": "plugins/org.adlotto.cordova.recheck-screen-orientation/www/recheck_screen_orientation.js",
         "id": "org.adlotto.cordova.recheck-screen-orientation.RecheckScreenOrientation",
         "clobbers": [
@@ -49,8 +63,10 @@ module.exports.metadata =
 {
     "com.phonegap.plugins.OrientationLock": "0.1",
     "cordova-plugin-device": "1.1.2",
+    "cordova-plugin-fullscreen": "1.1.0",
     "cordova-plugin-inappbrowser": "1.4.0",
     "cordova-plugin-screen-orientation": "1.4.2",
+    "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-whitelist": "1.2.3-dev",
     "org.adlotto.cordova.recheck-screen-orientation": "0.1.0"
 };

@@ -13,10 +13,16 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
+        "cordova-plugin-fullscreen": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.capesesp.mobile"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.capesesp.mobile"
         },
         "cordova-plugin-whitelist": {

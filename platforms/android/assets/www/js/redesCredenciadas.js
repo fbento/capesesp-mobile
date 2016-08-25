@@ -346,7 +346,7 @@ var redesCredenciadas = function() {
         else
             $(".esp-servico").css("display", "none");
         if (isServicoSelected() || !configURLLogin.exibeTipoServico) {
-            $(prosseguir2).show().focus().unbind('click').click(function() {
+            $(prosseguir2).focus().unbind('click').click(function() {
 
                 AtivarTab(3, []);
 
@@ -530,6 +530,7 @@ var redesCredenciadas = function() {
 
     function retornoDetalheCredenciado(responseParam) {
         $.mobile.changePage("#exibeCredenciados");
+        $("#esp").text("");
         var favoritos = JSON.parse(window.localStorage.getItem("favoritos"));
         var valorCpf = $("#cpfCredenciado").val();
         var valorSeq = $("#seqCredenciado").val();
@@ -550,7 +551,10 @@ var redesCredenciadas = function() {
         }
         $("#nome").text(testaNulo(responseParam.credenciados.nomeFantasia));
         if ($("#nome").text() == "") {
-            RemoveTableRow($("#nome"));
+            $("#nome").text(testaNulo(responseParam.credenciados.razaoSocial));
+            if ($("#nome").text() == "") {
+                RemoveTableRow($("#nome"));
+            }
         }
         $("#crm").html(testaNulo(responseParam.credenciados.registroConselho.descricao) + " " + testaNulo(responseParam.credenciados.registroConselho.registro) + "<span style='color:white !important'>.</span>");
         if ($("#crm").text() == "") {
@@ -608,15 +612,31 @@ var redesCredenciadas = function() {
         if ($("#atualizado").text() == "") {
             RemoveTableRow($("#atualizado"));
         }
-        $("#esp").text(testaNulo(responseParam.credenciados.qualificacao));
-        if ($("#esp").text() == "") {
-            RemoveTableRow($("#esp"));
+
+        function fillEspecialization() {
+            for (var i = 0; i < responseParam.credenciados.especialidades.length; i++) {
+                var espItem = responseParam.credenciados.especialidades[i].especialidade;
+                var text = $("#esp").text().concat(espItem);
+                if ((i + 1) != responseParam.credenciados.especialidades.length) {
+                    text = text.concat(", ");
+                } else {
+                    text = text.concat(" ");
+                }
+
+                $("#esp").text(text);
+            }
+            //$("#esp").text(testaNulo(responseParam.credenciados.especialidades));
+            if ($("#esp").text() == "") {
+                RemoveTableRow($("#esp"));
+            }
         }
+        fillEspecialization();
+
         $("#lat").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lat));
         $("#lng").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lng));
         $("#imgQualifi").children().remove();
         $.each(responseParam.credenciados.qualificacao, function(j, obj) {
-            var qualif = $("<img src='img/" + obj.cod_entidade + ".png' alt='Home' width='18' height='20'>");
+            var qualif = $("<img src='img/" + obj.codEntidade + ".png' alt='Home' width='18' height='20'>");
             $("#imgQualifi").append(qualif);
         });
     }

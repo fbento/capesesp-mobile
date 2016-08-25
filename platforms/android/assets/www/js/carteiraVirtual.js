@@ -16,7 +16,11 @@ var carteiraVirtual = function() {
         var storage = window.sessionStorage;
         configURLLogin.dadosGrupoFamiliar.matricula = storage.getItem("matricula");
         configURLLogin.dadosGrupoFamiliar.token = storage.getItem("token");
-        service.chamadaGenericaAjax(configURLLogin.urlGrupoFamiliar, configURLLogin.dadosGrupoFamiliar, retornoGrupoFamiliar);
+
+        if (window.sessionStorage.getItem("tipo_dependente") == "T")
+            service.chamadaGenericaAjax(configURLLogin.urlGrupoFamiliar, configURLLogin.dadosGrupoFamiliar, retornoGrupoFamiliar);
+        else
+            carteiraCtrl.listarTipoCarteira(window.sessionStorage.getItem("sequencial"));
     };
 
     var retornoGrupoFamiliar = function(responseParam) {
@@ -46,11 +50,11 @@ var carteiraVirtual = function() {
         $("#label_cart_list_ul").text("Selecione o Plano:");
         var storage = window.sessionStorage;
         storage.setItem("carteira-sequencial", sequencial);
-        configURLLogin.dadosCarteira.matricula = storage.getItem("matricula");
-        configURLLogin.dadosCarteira.token = storage.getItem("token");
-        configURLLogin.dadosCarteira.sequencial = sequencial;
+        configURLLogin.dadosTipoCarteira.matricula = storage.getItem("matricula");
+        configURLLogin.dadosTipoCarteira.token = storage.getItem("token");
+        configURLLogin.dadosTipoCarteira.sequencial = sequencial;
         //Request
-        service.chamadaGenericaAjax(configURLLogin.urlTipoCarteira, configURLLogin.dadosCarteira, retornoTipoCarteira);
+        service.chamadaGenericaAjax(configURLLogin.urlTipoCarteira, configURLLogin.dadosTipoCarteira, retornoTipoCarteira);
     };
 
     var retornoTipoCarteira = function(responseParam) {
@@ -212,6 +216,7 @@ var carteiraVirtual = function() {
         listarGrupoFamiliar: listarGrupoFamiliar,
         listarDetalhesCarteira: listarDetalhesCarteira,
         //flipCarteira: flipCarteira,
+        listarTipoCarteira: listarTipoCarteira,
         backCarteira: backCarteira
     }
 };
@@ -238,9 +243,6 @@ $(function() {
             carteiraCtrl.exibirCarteira('carteira_lista_detalhe');
         }
     }
-    if (window.sessionStorage.getItem("tipo_dependente") == "T")
-        carteiraCtrl.listarGrupoFamiliar();
-    else
-        carteiraCtrl.listarDetalhesCarteira(window.sessionStorage.getItem("sequencial"));
-
+    
+    carteiraCtrl.listarGrupoFamiliar();
 });

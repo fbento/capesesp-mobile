@@ -530,6 +530,7 @@ var redesCredenciadas = function() {
 
     function retornoDetalheCredenciado(responseParam) {
         $.mobile.changePage("#exibeCredenciados");
+        $("#esp").text("");
         var favoritos = JSON.parse(window.localStorage.getItem("favoritos"));
         var valorCpf = $("#cpfCredenciado").val();
         var valorSeq = $("#seqCredenciado").val();
@@ -611,10 +612,26 @@ var redesCredenciadas = function() {
         if ($("#atualizado").text() == "") {
             RemoveTableRow($("#atualizado"));
         }
-        $("#esp").text(testaNulo(responseParam.credenciados.qualificacao));
-        if ($("#esp").text() == "") {
-            RemoveTableRow($("#esp"));
+
+        function fillEspecialization() {
+            for (var i = 0; i < responseParam.credenciados.especialidades.length; i++) {
+                var espItem = responseParam.credenciados.especialidades[i].especialidade;
+                var text = $("#esp").text().concat(espItem);
+                if ((i + 1) != responseParam.credenciados.especialidades.length) {
+                    text = text.concat(", ");
+                } else {
+                    text = text.concat(" ");
+                }
+
+                $("#esp").text(text);
+            }
+            //$("#esp").text(testaNulo(responseParam.credenciados.especialidades));
+            if ($("#esp").text() == "") {
+                RemoveTableRow($("#esp"));
+            }
         }
+        fillEspecialization();
+
         $("#lat").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lat));
         $("#lng").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lng));
         $("#imgQualifi").children().remove();
