@@ -195,10 +195,9 @@ var carteiraVirtual = function() {
     var backCarteira = function() {
         SetOrientation('portrait');
         if (window.sessionStorage.getItem("tipo_dependente") == "T")
-
             $.mobile.changePage("carteira_virtual.html#pageone", { transition: "pop" });
         else
-            window.location.href = "index.html";
+            $.mobile.changePage("carteira_virtual.html#pageone", { transition: "pop" });
         document.addEventListener("backbutton", onBackKeyDown, false);
 
         function onBackKeyDown() {
@@ -210,6 +209,20 @@ var carteiraVirtual = function() {
         }
     }
 
+    var backGrupoFamiliar = function() {
+        SetOrientation('portrait');
+        if (window.sessionStorage.getItem("tipo_dependente") == "T"){
+            if($("#label_cart_list_ul").text().substr(-6, 5) == "Plano"){
+                carteiraCtrl.listarGrupoFamiliar();
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+        else{
+            window.location.href = "index.html";
+        }
+    }
+
     return {
         init: init,
         exibirCarteira: exibirCarteira,
@@ -217,7 +230,8 @@ var carteiraVirtual = function() {
         listarDetalhesCarteira: listarDetalhesCarteira,
         //flipCarteira: flipCarteira,
         listarTipoCarteira: listarTipoCarteira,
-        backCarteira: backCarteira
+        backCarteira: backCarteira,
+        backGrupoFamiliar: backGrupoFamiliar
     }
 };
 
