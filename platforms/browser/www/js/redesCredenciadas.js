@@ -509,7 +509,7 @@ var redesCredenciadas = function() {
         $("#cpfCredenciado").val(cpf);
         $("#seqCredenciado").val(seq);
         configURLLogin.dadosDetalheCredenciado.cpfCnpj = cpf;
-        // configURLLogin.dadosDetalheCredenciado.seq = seq;
+        configURLLogin.dadosDetalheCredenciado.sequencial = seq;
         service.chamadaGenericaAjax(configURLLogin.urlDetalheCredenciado, configURLLogin.dadosDetalheCredenciado, retornoDetalheCredenciado);
     }
 
