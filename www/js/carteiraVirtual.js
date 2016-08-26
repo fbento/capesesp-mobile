@@ -101,7 +101,7 @@ var carteiraVirtual = function() {
 
         SetOrientation('landscape');
         $.mobile.changePage("carteira_virtual.html#pagetwo", { transition: "pop", changeHash: false });
-
+        $("#pagetwo").show();
         $.mobile.loading("hide");
 
         $(".header-carteirinha").hide();
@@ -119,6 +119,8 @@ var carteiraVirtual = function() {
         $("#registro_ans").text(planANSCode);
         $("#cobertura").text(responseParam.plano.cobertura);
         $("#validade").text(responseParam.plano.validade);
+        $(".disqueans--site").text(responseParam.ans.site);
+        $(".disqueans--number").text(responseParam.ans.numeroTelefone);
         $("#observacoes").children().remove();
         $.each(responseParam.plano.mensagensCarencia, function(j, item) {
             var text = $("<h1 style='font-size:15px;'></h1>").text(item.mensagem);
@@ -154,6 +156,8 @@ var carteiraVirtual = function() {
         var carteirinha_img = $(".carteirinha__frente--img");
         var carteirinha_frente = $("#pagetwo #carteirinha__frente");
         var showBackButton = $("#pagetwo #carteirinha__frente--action");
+
+        $("#pagetwo").hide();
 
         $("#pagetwo, #carteirinha__frente, carteirinha__verso").click(function() {
             var header = $(".header-carteirinha"),
@@ -193,6 +197,8 @@ var carteiraVirtual = function() {
     };
 
     var backCarteira = function() {
+        $("#pagetwo").hide();
+
         SetOrientation('portrait');
         if (window.sessionStorage.getItem("tipo_dependente") == "T")
             $.mobile.changePage("carteira_virtual.html#pageone", { transition: "pop" });
@@ -210,6 +216,8 @@ var carteiraVirtual = function() {
     }
 
     var backGrupoFamiliar = function() {
+        $("#pagetwo").hide();
+
         SetOrientation('portrait');
         if (window.sessionStorage.getItem("tipo_dependente") == "T"){
             if($("#label_cart_list_ul").text().substr(-6, 5) == "Plano"){

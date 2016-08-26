@@ -57,9 +57,14 @@
 
 // ===== Verso =====
 #carteirinha__verso {
-    padding: 4% 3%;
+    padding: 4% 4%;
     box-sizing: border-box;
-    height: 100vh;
+    height: 94vh;
+    width: 94vw;
+    margin: 3vh 0;
+    border-radius: 20px;
+    //border: 3px solid #aaa;
+
     .carteirinha__verso--block {
         display: block;
     }
@@ -74,7 +79,7 @@
         // Common Styles
         display: inline-block;
         vertical-align: text-top;
-        font-weight: 900;
+        font-weight: 400;
         height: 4.8vh;
         // Row 1
         &#nome_usuario {
@@ -101,7 +106,7 @@
         &#plano_usuario {
             width: 72%;
             margin-bottom: $row-3-margin;
-            font-size: 0.9em;
+            font-size: 0.8em;
             line-height: 1.2em; 
         }
         &#acomodacao_usuario {
@@ -140,5 +145,25 @@
                 font-size: 0.68em !important;
             }
         }
+        //Disque ANS
+        &#disqueans {
+            position: absolute;
+            bottom: 13%;
+            left: 66%;
+            font-size: 0.8em;
+            text-align: center;
+            .disqueans--fone{
+                font-weight: 900;
+            }
+            .disqueans--site{
+                font-weight: 100;
+            }
+        }
+    }
+    .carteirinha__verso--label{
+        position: absolute;
+        margin-top: -22px;
+        font-size: 1.1em;
+        font-weight: 700;
     }
 }

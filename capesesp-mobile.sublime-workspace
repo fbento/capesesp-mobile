@@ -1,0 +1,555 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tab",
+				"tabIdArray"
+			],
+			[
+				"fle",
+				"flex-shrink"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"mc",
+				"mc-ripple__circle"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"dark",
+				"darkOrLight"
+			],
+			[
+				"e",
+				"elementBackground"
+			],
+			[
+				"get",
+				"getContrastYIQ"
+			],
+			[
+				"sideb",
+				"sidebarTrigger"
+			],
+			[
+				"mc-s",
+				"mc-sidebar-closed"
+			],
+			[
+				"mc-",
+				"mc-sidebar"
+			],
+			[
+				"def",
+				"default-transition-settings"
+			],
+			[
+				"border",
+				"border-box"
+			],
+			[
+				"mc-tab",
+				"mc-tab-panel"
+			],
+			[
+				"md",
+				"md-query"
+			],
+			[
+				"media",
+				"media-query-map"
+			],
+			[
+				"ac",
+				"activeTab"
+			],
+			[
+				"active",
+				"activeTab"
+			],
+			[
+				"act",
+				"activeTab"
+			],
+			[
+				"find",
+				"findTargetPanel"
+			],
+			[
+				"mc-t",
+				"mc-tab-panel"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"icon",
+				"timeline-icon-border-size"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"default-padding-y"
+			],
+			[
+				"block",
+				"block"
+			],
+			[
+				"darken",
+				"darkenColor"
+			],
+			[
+				"map",
+				"mapColor"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"defau",
+				"default-padding"
+			],
+			[
+				"ripp",
+				"rippleInit"
+			],
+			[
+				"boder",
+				"border"
+			],
+			[
+				"flex",
+				"flex-flow"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"bloc",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 215.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/paulohsa/Projects/capesesp-mobile"
+	],
+	"file_history":
+	[
+		"/home/paulohsa/Projects/components-ng1/components/src/app/mc-core/core.scss",
+		"/home/paulohsa/Projects/components-ng1/components/src/app/mc-core/core.config.js",
+		"/home/paulohsa/Projects/components/app/components/mc-core/config/_colors.scss",
+		"/home/paulohsa/Projects/components/app/demo-news.html",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-icons/_config.scss",
+		"/home/paulohsa/Projects/components/app/demo-cards.html",
+		"/home/paulohsa/Projects/components/app/components/mc-card/mc-card.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/_layout.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/_functions.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/config/_media-queries.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-core.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/config/_defaults.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/typography/_config.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/typography/typography.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-toolbar/mc-toolbar.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/_cell.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/_global.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-sidebar/mc-sidebar.js",
+		"/home/paulohsa/Projects/components/app/components/mc-sidebar/mc-sidebar.html",
+		"/home/paulohsa/Projects/components/app/index.html",
+		"/home/paulohsa/Projects/components/app/components/mc-sidebar/mc-sidebar.scss",
+		"/home/paulohsa/Projects/components/app/demo-timeline.html",
+		"/home/paulohsa/Projects/components/app/components/mc-button/mc-button.scss",
+		"/home/paulohsa/Projects/components/.tmp/components/mc-sidebar/mc-sidebar.html",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-ripple/mc-lightordark.js",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-ripple/mc-ripple.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-ripple/mc-ripple.js",
+		"/home/paulohsa/Projects/components/app/scripts/main.js",
+		"/home/paulohsa/Projects/components/app/components/mc-sidebar/_mixins.scss",
+		"/home/paulohsa/Projects/components/app/styles/main.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/_container.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/_section.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-tabs/mc-tabs.js",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-whiteframe/_config.scss",
+		"/home/paulohsa/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/paulohsa/Projects/components/app/components/mc-tabs/mc-tabs.scss",
+		"/home/paulohsa/Projects/components/app/demo-content.html",
+		"/home/paulohsa/Projects/components/app/components/mc-timeline/mc-timeline.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-icons/mc-icons.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-timeline/_config.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-timeline/mc-timeline.js",
+		"/home/paulohsa/Projects/components/app/styles/base/typography.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-menu-list/mc-menu-list.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-icons/_font-face.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-icons/_animations.scss",
+		"/home/paulohsa/Projects/components/.tmp/styles/main.css",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-whiteframe/mc-whiteframe.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/mc-grid.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-grid/_config.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-toolbar/_config.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/config/_z-index.scss",
+		"/home/paulohsa/Projects/components/app/components/mc-core/mc-core.js",
+		"/home/paulohsa/Projects/components/app/components/mc-menu-list/mc-menu-list.js",
+		"/home/paulohsa/Projects/components/app/components/mc-core/typography/_mixin.scss",
+		"/home/paulohsa/Projects/capesesp-mobile/www/config.xml",
+		"/home/paulohsa/Projects/components/app/components/mc-tabs/mc-tabs.html",
+		"/home/paulohsa/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/paulohsa/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+		"/home/paulohsa/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 176.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".mci",
+			"mci",
+			"port",
+			"items",
+			"mc-card-title",
+			"mc-card-actions",
+			"mc-card-content",
+			"[flex]",
+			"flex",
+			"left",
+			"query",
+			"queries",
+			"setAt",
+			"attr",
+			"child-care",
+			"$timeline",
+			"<mc-icon",
+			"mc-icon",
+			"*[padding]",
+			"breadcrumb",
+			"mci",
+			"$app-size-reference",
+			"main-content",
+			"#planosList",
+			"<preference",
+			"md-sidenav"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"mc-card-header",
+			"mc-card-footer",
+			"mc-card-body",
+			"notifications",
+			"<mc-icon rounded",
+			"mc-icon rounded",
+			"mc-icon",
+			"$app-size-reference"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 76.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 204.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "capesesp-mobile.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mc-side",
+				"app/components/mc-sidebar/mc-sidebar.html"
+			],
+			[
+				"mc-tam",
+				"app/components/mc-tabs/mc-tabs.scss"
+			],
+			[
+				"index.ht",
+				"app/index.html"
+			],
+			[
+				"mc-card",
+				"app/components/mc-card/mc-card.scss"
+			],
+			[
+				"color",
+				"app/components/mc-core/config/_colors.scss"
+			],
+			[
+				"toolbar",
+				"app/components/mc-toolbar/mc-toolbar.scss"
+			],
+			[
+				"typo",
+				"app/components/mc-core/typography/typography.scss"
+			],
+			[
+				"sidebar",
+				"app/components/mc-sidebar/mc-sidebar.html"
+			],
+			[
+				"sidebar.scss",
+				"app/components/mc-sidebar/mc-sidebar.scss"
+			],
+			[
+				"sidebar.html",
+				".tmp/components/mc-sidebar/mc-sidebar.html"
+			],
+			[
+				"mc-sidebar",
+				"app/components/mc-sidebar/mc-sidebar.js"
+			],
+			[
+				"_defaults",
+				"app/components/mc-core/config/_defaults.scss"
+			],
+			[
+				"whitefra",
+				"app/components/mc-core/mc-whiteframe/_config.scss"
+			],
+			[
+				"iconconfig",
+				"app/components/mc-core/mc-icons/_config.scss"
+			],
+			[
+				"mc-tabs",
+				"app/components/mc-tabs/mc-tabs.js"
+			],
+			[
+				"mc-icons.scss",
+				"app/components/mc-core/mc-icons/mc-icons.scss"
+			],
+			[
+				"mc-icons",
+				"app/components/mc-core/mc-icons/_config.scss"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"typogra",
+				"app/components/mc-core/typography/typography.scss"
+			],
+			[
+				"sidebar.hm",
+				"app/components/mc-sidebar/mc-sidebar.html"
+			],
+			[
+				"menu-list",
+				"app/components/mc-menu-list/mc-menu-list.scss"
+			],
+			[
+				"_color",
+				"app/components/mc-core/config/_colors.scss"
+			],
+			[
+				"color.scss",
+				"app/components/mc-core/config/_colors.scss"
+			],
+			[
+				"functions.scss",
+				"app/components/mc-core/_functions.scss"
+			],
+			[
+				"main",
+				"app/styles/main.scss"
+			],
+			[
+				"cell",
+				"app/components/mc-core/mc-grid/_cell.scss"
+			],
+			[
+				"section",
+				"app/components/mc-core/mc-grid/_section.scss"
+			],
+			[
+				"z-",
+				"app/components/mc-core/config/_z-index.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Projects/capesesp-mobile/capesesp-mobile.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -44,15 +44,18 @@
     text-align: center; }
 
 #carteirinha__verso {
-  padding: 4% 3%;
+  padding: 4% 4%;
   box-sizing: border-box;
-  height: 100vh; }
+  height: 94vh;
+  width: 94vw;
+  margin: 3vh 0;
+  border-radius: 20px; }
   #carteirinha__verso .carteirinha__verso--block {
     display: block; }
   #carteirinha__verso .carteirinha__verso--dados {
     display: inline-block;
     vertical-align: text-top;
-    font-weight: 900;
+    font-weight: 400;
     height: 4.8vh; }
     #carteirinha__verso .carteirinha__verso--dados#nome_usuario {
       margin-bottom: 7.25%; }
@@ -71,7 +74,7 @@
     #carteirinha__verso .carteirinha__verso--dados#plano_usuario {
       width: 72%;
       margin-bottom: 5.3%;
-      font-size: 0.9em;
+      font-size: 0.8em;
       line-height: 1.2em; }
     #carteirinha__verso .carteirinha__verso--dados#acomodacao_usuario {
       width: 25%;
@@ -98,5 +101,20 @@
       height: auto; }
       #carteirinha__verso .carteirinha__verso--dados#observacoes h1 {
         font-size: 0.68em !important; }
+    #carteirinha__verso .carteirinha__verso--dados#disqueans {
+      position: absolute;
+      bottom: 13%;
+      left: 66%;
+      font-size: 0.8em;
+      text-align: center; }
+      #carteirinha__verso .carteirinha__verso--dados#disqueans .disqueans--fone {
+        font-weight: 900; }
+      #carteirinha__verso .carteirinha__verso--dados#disqueans .disqueans--site {
+        font-weight: 100; }
+  #carteirinha__verso .carteirinha__verso--label {
+    position: absolute;
+    margin-top: -22px;
+    font-size: 1.1em;
+    font-weight: 700; }
 
 /*# sourceMappingURL=carteirinha.css.map */
