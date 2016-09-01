@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-weight"
+			],
+			[
 				"tab",
 				"tabIdArray"
 			],
@@ -96,10 +100,6 @@
 				"block"
 			],
 			[
-				"font",
-				"font-style"
-			],
-			[
 				"margin",
 				"margin-top"
 			],
@@ -167,6 +167,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/carteira_virtual.html",
+			"settings":
+			{
+				"buffer_size": 8430,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/carteiraVirtual.js",
+			"settings":
+			{
+				"buffer_size": 11432,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/main.js",
+			"settings":
+			{
+				"buffer_size": 5396,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/css/common.css",
+			"settings":
+			{
+				"buffer_size": 14508,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/css/carteirinha.scss",
+			"settings":
+			{
+				"buffer_size": 3785,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -213,7 +253,10 @@
 	},
 	"expanded_folders":
 	[
-		"/home/paulohsa/Projects/capesesp-mobile"
+		"/home/paulohsa/Projects/capesesp-mobile",
+		"/home/paulohsa/Projects/capesesp-mobile/www",
+		"/home/paulohsa/Projects/capesesp-mobile/www/css",
+		"/home/paulohsa/Projects/capesesp-mobile/www/js"
 	],
 	"file_history":
 	[
@@ -279,7 +322,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 74.0
 	},
 	"find_in_files":
 	{
@@ -294,6 +337,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"init",
+			"init]",
+			"back",
+			"setorientation",
+			"portrait",
+			"carteirinha__verso",
+			"carteirinha--verso",
+			"carteirinha__verso",
+			"verso",
 			".mci",
 			"mci",
 			"port",
@@ -345,8 +397,159 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/carteira_virtual.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2234,
+								2234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 804.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/carteiraVirtual.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7159,
+								7159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4110.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								509,
+								509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/css/common.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7996,
+								7996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/css/carteirinha.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3785,
+								3785
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4466.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -520,12 +723,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "soci",
 		"selected_items":
 		[
 			[
+				"soci",
+				"~/Projects/social/social/meplis-social.sublime-project"
+			],
+			[
 				"",
-				"~/Projects/capesesp-mobile/capesesp-mobile.sublime-project"
+				"~/Projects/capesesp-mobile/www/css/chargers.sublime-project"
 			]
 		],
 		"width": 380.0
