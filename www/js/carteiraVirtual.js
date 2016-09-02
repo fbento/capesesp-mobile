@@ -98,10 +98,14 @@ var carteiraVirtual = function() {
         var storage = window.sessionStorage;
         var planType = storage.getItem("carteira-tipo");
         var planANSCode = storage.getItem("carteira-registroANS");
+        
+        document.addEventListener("backbutton", carteiraCtrl.backCarteiraOnBackKeyDown, true);
 
         SetOrientation('landscape');
         $.mobile.changePage("carteira_virtual.html#pagetwo", { transition: "pop", changeHash: false });
-        $("#pagetwo").show();
+        setTimeout(function() {
+            $("#pagetwo").show();
+        }, 500);
         $.mobile.loading("hide");
 
         $(".header-carteirinha").hide();
@@ -198,8 +202,10 @@ var carteiraVirtual = function() {
 
     var backCarteira = function() {
         $("#pagetwo").hide();
+        setTimeout(function() {
+            SetOrientation('portrait');
+        }, 500);
 
-        SetOrientation('portrait');
         if (window.sessionStorage.getItem("tipo_dependente") == "T")
             $.mobile.changePage("carteira_virtual.html#pageone", { transition: "pop" });
         else
@@ -207,26 +213,44 @@ var carteiraVirtual = function() {
         document.addEventListener("backbutton", onBackKeyDown, false);
 
         function onBackKeyDown() {
-            if (window.sessionStorage.getItem("tipo_dependente") == "T")
-                navigator.app.backHistory();
-            else
-                window.location.href = "index.html";
-
+            if (window.sessionStorage.getItem("tipo_dependente") == "T") {
+                $("#pagetwo").hide();
+                setTimeout(function() {
+                    navigator.app.backHistory();
+                }, 500);
+            } else {
+                $("#pagetwo").hide();
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 500);
+            }
         }
     }
 
+    var backCarteiraOnBackKeyDown = function() {
+        if (window.sessionStorage.getItem("tipo_dependente") == "T") {
+            $("#pagetwo").hide();
+            setTimeout(function() {
+                navigator.app.backHistory();
+            }, 500);
+        } else {
+            $("#pagetwo").hide();
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 500);
+        }
+    }
     var backGrupoFamiliar = function() {
         $("#pagetwo").hide();
 
         SetOrientation('portrait');
-        if (window.sessionStorage.getItem("tipo_dependente") == "T"){
-            if($("#label_cart_list_ul").text().substr(-6, 5) == "Plano"){
+        if (window.sessionStorage.getItem("tipo_dependente") == "T") {
+            if ($("#label_cart_list_ul").text().substr(-6, 5) == "Plano") {
                 carteiraCtrl.listarGrupoFamiliar();
             } else {
                 window.location.href = "index.html";
             }
-        }
-        else{
+        } else {
             window.location.href = "index.html";
         }
     }
@@ -239,7 +263,8 @@ var carteiraVirtual = function() {
         //flipCarteira: flipCarteira,
         listarTipoCarteira: listarTipoCarteira,
         backCarteira: backCarteira,
-        backGrupoFamiliar: backGrupoFamiliar
+        backGrupoFamiliar: backGrupoFamiliar,
+        backCarteiraOnBackKeyDown: backCarteiraOnBackKeyDown,
     }
 };
 
@@ -265,6 +290,6 @@ $(function() {
             carteiraCtrl.exibirCarteira('carteira_lista_detalhe');
         }
     }
-    
+
     carteiraCtrl.listarGrupoFamiliar();
 });

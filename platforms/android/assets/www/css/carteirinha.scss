@@ -81,6 +81,7 @@
         vertical-align: text-top;
         font-weight: 400;
         height: 4.8vh;
+        font-size: 0.85em;
         // Row 1
         &#nome_usuario {
             margin-bottom: $row-1-margin;
@@ -141,6 +142,7 @@
             bottom: 5%;
             line-height: 0.5em;
             height: auto;
+            font-size: 0.7em;
             h1 {
                 font-size: 0.68em !important;
             }

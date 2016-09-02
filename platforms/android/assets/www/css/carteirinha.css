@@ -56,7 +56,8 @@
     display: inline-block;
     vertical-align: text-top;
     font-weight: 400;
-    height: 4.8vh; }
+    height: 4.8vh;
+    font-size: 0.85em; }
     #carteirinha__verso .carteirinha__verso--dados#nome_usuario {
       margin-bottom: 7.25%; }
     #carteirinha__verso .carteirinha__verso--dados#mat_usuario {
@@ -98,7 +99,8 @@
       position: absolute;
       bottom: 5%;
       line-height: 0.5em;
-      height: auto; }
+      height: auto;
+      font-size: 0.7em; }
       #carteirinha__verso .carteirinha__verso--dados#observacoes h1 {
         font-size: 0.68em !important; }
     #carteirinha__verso .carteirinha__verso--dados#disqueans {
