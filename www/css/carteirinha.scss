@@ -48,10 +48,11 @@
         display: block;
         color: white;
         box-sizing: border-box;
-        padding: 3% 10% 3% 3%;
+        padding: 2.5% 10% 3% 3%;
         font-weight: 900;
         border-radius: 15px 0 0 15px;
         text-align: center;
+        font-size: 0.9em;
     }
 }
 
@@ -81,6 +82,7 @@
         vertical-align: text-top;
         font-weight: 400;
         height: 4.8vh;
+        font-size: 0.85em;
         // Row 1
         &#nome_usuario {
             margin-bottom: $row-1-margin;
@@ -141,6 +143,7 @@
             bottom: 5%;
             line-height: 0.5em;
             height: auto;
+            font-size: 0.7em;
             h1 {
                 font-size: 0.68em !important;
             }
@@ -163,7 +166,7 @@
     .carteirinha__verso--label{
         position: absolute;
         margin-top: -22px;
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 700;
     }
 }
