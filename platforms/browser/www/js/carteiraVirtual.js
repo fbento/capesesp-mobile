@@ -122,6 +122,7 @@ var carteiraVirtual = function() {
         $("#abrangencia").text(responseParam.plano.abrangencia);
         $("#registro_ans").text(planANSCode);
         $("#cobertura").text(responseParam.plano.cobertura);
+        $("#patrocinador").text(responseParam.plano.patrocinadorOriginal);
         $("#validade").text(responseParam.plano.validade);
         $(".disqueans--site").text(responseParam.ans.site);
         $(".disqueans--number").text(responseParam.ans.numeroTelefone);

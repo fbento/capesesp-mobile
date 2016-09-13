@@ -702,7 +702,7 @@ var redesCredenciadas = function() {
 
     function obterEndereco() {
         $.mobile.loading("show");
-        navigator.geolocation.getCurrentPosition(geo_success, geo_error, { timeout: 5000, enableHighAccuracy: true });
+        navigator.geolocation.getCurrentPosition(geo_success, geo_error, { timeout: 10000, enableHighAccuracy: true });
     }
 
     function geo_success(position) {

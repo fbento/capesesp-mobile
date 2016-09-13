@@ -58,7 +58,8 @@
     vertical-align: text-top;
     font-weight: 400;
     height: 4.8vh;
-    font-size: 0.85em; }
+    font-size: 0.85em;
+    margin-top: -3px; }
     #carteirinha__verso .carteirinha__verso--dados#nome_usuario {
       margin-bottom: 7.25%; }
     #carteirinha__verso .carteirinha__verso--dados#mat_usuario {

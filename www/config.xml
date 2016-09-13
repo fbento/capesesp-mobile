@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.capesesp.mobile" version="1.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.capesesp.mobile" version="1.0.26" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Capesesp</name>
     <description>
         Capesesp mobile app.
@@ -43,7 +43,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
-        <string>124</string>
+        <string>126</string>
     </gap:config-file>
 
     <icon src="icon.png" />

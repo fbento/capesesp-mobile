@@ -171,7 +171,7 @@
 			"file": "www/carteira_virtual.html",
 			"settings":
 			{
-				"buffer_size": 8430,
+				"buffer_size": 8692,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,7 +187,7 @@
 			"file": "www/js/carteiraVirtual.js",
 			"settings":
 			{
-				"buffer_size": 12362,
+				"buffer_size": 12437,
 				"line_ending": "Windows"
 			}
 		},
@@ -211,7 +211,7 @@
 			"file": "www/css/carteirinha.scss",
 			"settings":
 			{
-				"buffer_size": 3867,
+				"buffer_size": 3895,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "www/config.xml",
 			"settings":
 			{
-				"buffer_size": 5781,
+				"buffer_size": 6495,
 				"line_ending": "Unix"
 			}
 		}
@@ -271,7 +271,7 @@
 	[
 		"/home/paulohsa/Projects/capesesp-mobile",
 		"/home/paulohsa/Projects/capesesp-mobile/www",
-		"/home/paulohsa/Projects/capesesp-mobile/www/js"
+		"/home/paulohsa/Projects/capesesp-mobile/www/css"
 	],
 	"file_history":
 	[
@@ -337,7 +337,7 @@
 	],
 	"find":
 	{
-		"height": 74.0
+		"height": 76.0
 	},
 	"find_in_files":
 	{
@@ -423,15 +423,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8430,
+						"buffer_size": 8692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								914,
-								914
+								5979,
+								5979
 							]
 						],
 						"settings":
@@ -441,10 +441,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 253.0,
+						"translation.y": 2764.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -460,8 +460,8 @@
 						"selection":
 						[
 							[
-								36156,
-								36156
+								27502,
+								27502
 							]
 						],
 						"settings":
@@ -471,10 +471,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 26021.0,
+						"translation.y": 21395.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -483,15 +483,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12362,
+						"buffer_size": 12437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11469,
-								11469
+								5637,
+								5637
 							]
 						],
 						"settings":
@@ -501,10 +501,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7664.0,
+						"translation.y": 3384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -561,10 +561,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12677.0,
+						"translation.y": 13551.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -573,15 +573,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3867,
+						"buffer_size": 3895,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3867,
-								3867
+								1381,
+								1381
 							]
 						],
 						"settings":
@@ -591,7 +591,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4872.0,
+						"translation.y": 2011.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -603,15 +603,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5781,
+						"buffer_size": 6495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								447,
-								447
+								5627,
+								5627
 							]
 						],
 						"settings":
@@ -621,7 +621,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1218.0,
+						"translation.y": 2232.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -632,7 +632,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -673,7 +673,7 @@
 	"project": "capesesp-mobile.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -809,6 +809,10 @@
 		[
 			[
 				"",
+				"~/Projects/capesesp-mobile/www/css/chargers.sublime-project"
+			],
+			[
+				"soc",
 				"~/Projects/social/social/meplis-social.sublime-project"
 			],
 			[
