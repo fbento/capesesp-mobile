@@ -1,10 +1,10 @@
 //https://webservicesh.capesesp.com.br/capesesp-apis-v1.1/ws/
-var hostApi = "https://webservicesh.capesesp.com.br/";
-var apiBaseUrl = hostApi + "capesesp-apis-v1.1/ws/";
+var hostApi = "https://webservices.capesesp.com.br/";
+var apiBaseUrl = hostApi + "capesesp-apis-v1.2/ws/";
 var urlRedeCredenciada = apiBaseUrl + "redecredenciada/";
 
 var configURLLogin = {
-    iframesBaseUrl: "https://servicosh.capesesp.com.br/",
+    iframesBaseUrl: "https://servicos.capesesp.com.br/",
     url: apiBaseUrl + "json/login",
     urlValidaToken: apiBaseUrl + "json/valida",
     urlRecuperaInformacoes: apiBaseUrl + "informacoes/recupera",

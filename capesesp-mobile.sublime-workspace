@@ -187,7 +187,36 @@
 			"file": "www/js/carteiraVirtual.js",
 			"settings":
 			{
-				"buffer_size": 12437,
+				"buffer_size": 11986,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/loginService.js",
+			"settings":
+			{
+				"buffer_size": 1961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 8502 files for \"runtimePopup(\"\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/bin-version-check:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/dateformat:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/executable:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/find-versions:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/gifsicle:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/jpegtran:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/lpad-align:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/optipng:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/pngquant:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/rc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-bunzip:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-table:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/semver:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-dirs:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-indent:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-json-comments:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/dao.js:\n   86  }\n   87  \n   88: function runtimePopup(header, message, notBack, callback) {\n   89  \n   90      var template = \"<div data-role='popup' id='popupDialog' data-overlay-theme='a' data-theme='c' class='pop-up-tamanho ui-corner-all messagePopup'>\" + \"<div data-role='header' data-theme='a' class='pop-up-header ui-corner-top' >\" + \"<h1>\" + header + \"</h1>\" + \"</div>\" + \"<div data-role='content' data-theme='d' class='ui-corner-bottom ui-content' style = 'margin: 15px;'>\" + \"<h3 class='ui-title'>\" + message + \"</h3>\" + \"<a href='#' data-role='button' data-inline='true' data-rel='back' class = 'pop-up-botao1' > OK </a>\" + \"</div>\";\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/dataService.js:\n   13              error: function () {\n   14                  $.mobile.loading(\"show\");\n   15:                 setTimeout(function(){runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false,errorCallback);\n   16                  	$.mobile.loading(\"hide\");},1000);\n   17  \n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/loginService.js:\n   40              {\n   41                  $.mobile.loading(\"hide\");\n   42:                 runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   43                      window.location.href = \"index.html\";\n   44                  });\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/main.js:\n   40          var login = $(\"#login\").val(), senha = $(\"#senha\").val();\n   41          if (!login || !senha)\n   42:             runtimePopup(\"Login\", \"Favor informar Matrícula e Senha\", true);\n   43          if (login.length <= 2)\n   44:             runtimePopup(\"Login\", \"Matrícula ou senha inválida\", true);\n   45          else\n   46              loginUsuario(login, senha);\n   ..\n   75                  {\n   76                      $.mobile.loading(\"hide\");\n   77:                     runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   78                          window.location.href = \"index.html\";\n   79                      });\n   ..\n   82                      window.location.href = configURLLogin.telaChamada;\n   83              } else\n   84:             runtimePopup(\"Login\", item.mensagem);\n   85          });\n   86  };\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/redesCredenciadas.js:\n  212  \n  213          if (responseParam.estados.length == 0) {\n  214:             runtimePopup(\"Rede Credenciada\", \"Não há estados para o plano selecionado\");\n  215              return;\n  216          }\n  ...\n  250  \n  251          if (responseParam.municipios.length == 0 && $('#estadoList').val() > 0) {\n  252:             runtimePopup(\"Rede Credenciada\", \"Não há municípios para o plano selecionado\");\n  253              return;\n  254          }\n  ...\n  324          });\n  325          if (vazio && $('#tiposervicoList').val() > 0 && modalidade != \"5\") {\n  326:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  327              return;\n  328          }\n  ...\n  384  \n  385          if (responseParam.modalidades.length == 0 && $('#estadoList').val() > 0) {\n  386:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  387              return;\n  388          }\n  ...\n  685          switch (error.code) {\n  686              case 0:\n  687:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  688                  break;\n  689              case 1:\n  690:                 runtimePopup(\"Localização\", \"Aplicação não tem autorização para obter a sua localização\");\n  691                  break;\n  692              case 2:\n  693:                 runtimePopup(\"Localização\", \"A sua localização está indisponivel no momento\");\n  694                  break;\n  695              case 3:\n  696:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  697                  break;\n  698              default:\n  699:                 runtimePopup(\"Localização\", \"Não foi possível obter a sua localização\");\n  700          }\n  701      }\n  ...\n  724              $(\"#estadoList\").trigger(\"change\");\n  725          } else\n  726:             runtimePopup(\"Obter posição\", \"Erro na obtenção da posição, favor preencher manualmente.\")\n  727  \n  728      }\n  ...\n  761              };\n  762              if (listaContemValorFav(favoritos, valorCpf, valorSeq))\n  763:                 runtimePopup(\"Favorito\", \"Favorito já gravado\");\n  764              else {\n  765                  favoritos.push(novoFavorito);\n  766                  storage.setItem(\"favoritos\", JSON.stringify(favoritos));\n  767:                 runtimePopup(\"Favorito\", \"Favorito gravado com sucesso\");\n  768                  $(\".detalhes-favoritar\").text(\"Favoritado\");\n  769                  $(\".detalhes-favotiarimg\").attr(\"src\", \"img/favoritoy.png\");\n  ...\n  837  \n  838          } else {\n  839:             runtimePopup(\"Erro\", \"Não foi possivel obter a rota.\");\n  840          }\n  841      }\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/js/webview.js:\n   18          }).error(function(){\n   19              $.mobile.loading(\"hide\");\n   20:             runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false);\n   21          })\n   22      }\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/dao.js:\n   86  }\n   87  \n   88: function runtimePopup(header, message, notBack, callback) {\n   89  \n   90      var template = \"<div data-role='popup' id='popupDialog' data-overlay-theme='a' data-theme='c' class='pop-up-tamanho ui-corner-all messagePopup'>\" + \"<div data-role='header' data-theme='a' class='pop-up-header ui-corner-top' >\" + \"<h1>\" + header + \"</h1>\" + \"</div>\" + \"<div data-role='content' data-theme='d' class='ui-corner-bottom ui-content' style = 'margin: 15px;'>\" + \"<h3 class='ui-title'>\" + message + \"</h3>\" + \"<a href='#' data-role='button' data-inline='true' data-rel='back' class = 'pop-up-botao1' > OK </a>\" + \"</div>\";\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/dataService.js:\n   13              error: function () {\n   14                  $.mobile.loading(\"show\");\n   15:                 setTimeout(function(){runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false,errorCallback);\n   16                  	$.mobile.loading(\"hide\");},1000);\n   17  \n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/loginService.js:\n   40              {\n   41                  $.mobile.loading(\"hide\");\n   42:                 runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   43                      window.location.href = \"index.html\";\n   44                  });\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/main.js:\n   40          var login = $(\"#login\").val(), senha = $(\"#senha\").val();\n   41          if (!login || !senha)\n   42:             runtimePopup(\"Login\", \"Favor informar Matrícula e Senha\", true);\n   43          if (login.length <= 2)\n   44:             runtimePopup(\"Login\", \"Matrícula ou senha inválida\", true);\n   45          else\n   46              loginUsuario(login, senha);\n   ..\n   75                  {\n   76                      $.mobile.loading(\"hide\");\n   77:                     runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   78                          window.location.href = \"index.html\";\n   79                      });\n   ..\n   82                      window.location.href = configURLLogin.telaChamada;\n   83              } else\n   84:             runtimePopup(\"Login\", item.mensagem);\n   85          });\n   86  };\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/redesCredenciadas.js:\n  212  \n  213          if (responseParam.estados.length == 0) {\n  214:             runtimePopup(\"Rede Credenciada\", \"Não há estados para o plano selecionado\");\n  215              return;\n  216          }\n  ...\n  250  \n  251          if (responseParam.municipios.length == 0 && $('#estadoList').val() > 0) {\n  252:             runtimePopup(\"Rede Credenciada\", \"Não há municípios para o plano selecionado\");\n  253              return;\n  254          }\n  ...\n  324          });\n  325          if (vazio && $('#tiposervicoList').val() > 0 && modalidade != \"5\") {\n  326:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  327              return;\n  328          }\n  ...\n  384  \n  385          if (responseParam.modalidades.length == 0 && $('#estadoList').val() > 0) {\n  386:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  387              return;\n  388          }\n  ...\n  685          switch (error.code) {\n  686              case 0:\n  687:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  688                  break;\n  689              case 1:\n  690:                 runtimePopup(\"Localização\", \"Aplicação não tem autorização para obter a sua localização\");\n  691                  break;\n  692              case 2:\n  693:                 runtimePopup(\"Localização\", \"A sua localização está indisponivel no momento\");\n  694                  break;\n  695              case 3:\n  696:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  697                  break;\n  698              default:\n  699:                 runtimePopup(\"Localização\", \"Não foi possível obter a sua localização\");\n  700          }\n  701      }\n  ...\n  724              $(\"#estadoList\").trigger(\"change\");\n  725          } else\n  726:             runtimePopup(\"Obter posição\", \"Erro na obtenção da posição, favor preencher manualmente.\")\n  727  \n  728      }\n  ...\n  761              };\n  762              if (listaContemValorFav(favoritos, valorCpf, valorSeq))\n  763:                 runtimePopup(\"Favorito\", \"Favorito já gravado\");\n  764              else {\n  765                  favoritos.push(novoFavorito);\n  766                  storage.setItem(\"favoritos\", JSON.stringify(favoritos));\n  767:                 runtimePopup(\"Favorito\", \"Favorito gravado com sucesso\");\n  768                  $(\".detalhes-favoritar\").text(\"Favoritado\");\n  769                  $(\".detalhes-favotiarimg\").attr(\"src\", \"img/favoritoy.png\");\n  ...\n  837  \n  838          } else {\n  839:             runtimePopup(\"Erro\", \"Não foi possivel obter a rota.\");\n  840          }\n  841      }\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/js/webview.js:\n   18          }).error(function(){\n   19              $.mobile.loading(\"hide\");\n   20:             runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false);\n   21          })\n   22      }\n\n/home/paulohsa/Projects/capesesp-mobile/www/js/dao.js:\n   86  }\n   87  \n   88: function runtimePopup(header, message, notBack, callback) {\n   89  \n   90      var template = \"<div data-role='popup' id='popupDialog' data-overlay-theme='a' data-theme='c' class='pop-up-tamanho ui-corner-all messagePopup'>\" + \"<div data-role='header' data-theme='a' class='pop-up-header ui-corner-top' >\" + \"<h1>\" + header + \"</h1>\" + \"</div>\" + \"<div data-role='content' data-theme='d' class='ui-corner-bottom ui-content' style = 'margin: 15px;'>\" + \"<h3 class='ui-title'>\" + message + \"</h3>\" + \"<a href='#' data-role='button' data-inline='true' data-rel='back' class = 'pop-up-botao1' > OK </a>\" + \"</div>\";\n\n/home/paulohsa/Projects/capesesp-mobile/www/js/dataService.js:\n   13              error: function () {\n   14                  $.mobile.loading(\"show\");\n   15:                 setTimeout(function(){runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false,errorCallback);\n   16                  	$.mobile.loading(\"hide\");},1000);\n   17  \n\n/home/paulohsa/Projects/capesesp-mobile/www/js/loginService.js:\n   40              {\n   41                  $.mobile.loading(\"hide\");\n   42:                 runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   43                      window.location.href = \"index.html\";\n   44                  });\n\n/home/paulohsa/Projects/capesesp-mobile/www/js/main.js:\n   40          var login = $(\"#login\").val(), senha = $(\"#senha\").val();\n   41          if (!login || !senha)\n   42:             runtimePopup(\"Login\", \"Favor informar Matrícula e Senha\", true);\n   43          if (login.length <= 2)\n   44:             runtimePopup(\"Login\", \"Matrícula ou senha inválida\", true);\n   45          else\n   46              loginUsuario(login, senha);\n   ..\n   75                  {\n   76                      $.mobile.loading(\"hide\");\n   77:                     runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n   78                          window.location.href = \"index.html\";\n   79                      });\n   ..\n   82                      window.location.href = configURLLogin.telaChamada;\n   83              } else\n   84:             runtimePopup(\"Login\", item.mensagem);\n   85          });\n   86  };\n\n/home/paulohsa/Projects/capesesp-mobile/www/js/redesCredenciadas.js:\n  212  \n  213          if (responseParam.estados.length == 0) {\n  214:             runtimePopup(\"Rede Credenciada\", \"Não há estados para o plano selecionado\");\n  215              return;\n  216          }\n  ...\n  250  \n  251          if (responseParam.municipios.length == 0 && $('#estadoList').val() > 0) {\n  252:             runtimePopup(\"Rede Credenciada\", \"Não há municípios para o plano selecionado\");\n  253              return;\n  254          }\n  ...\n  324          });\n  325          if (vazio && $('#tiposervicoList').val() > 0 && modalidade != \"5\") {\n  326:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  327              return;\n  328          }\n  ...\n  384  \n  385          if (responseParam.modalidades.length == 0 && $('#estadoList').val() > 0) {\n  386:             runtimePopup(\"Rede Credenciada\", \"Não há serviços para o plano selecionado\");\n  387              return;\n  388          }\n  ...\n  685          switch (error.code) {\n  686              case 0:\n  687:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  688                  break;\n  689              case 1:\n  690:                 runtimePopup(\"Localização\", \"Aplicação não tem autorização para obter a sua localização\");\n  691                  break;\n  692              case 2:\n  693:                 runtimePopup(\"Localização\", \"A sua localização está indisponivel no momento\");\n  694                  break;\n  695              case 3:\n  696:                 runtimePopup(\"Localização\", \"Ocorreu um erro ao tentar obter a sua localização\");\n  697                  break;\n  698              default:\n  699:                 runtimePopup(\"Localização\", \"Não foi possível obter a sua localização\");\n  700          }\n  701      }\n  ...\n  724              $(\"#estadoList\").trigger(\"change\");\n  725          } else\n  726:             runtimePopup(\"Obter posição\", \"Erro na obtenção da posição, favor preencher manualmente.\")\n  727  \n  728      }\n  ...\n  761              };\n  762              if (listaContemValorFav(favoritos, valorCpf, valorSeq))\n  763:                 runtimePopup(\"Favorito\", \"Favorito já gravado\");\n  764              else {\n  765                  favoritos.push(novoFavorito);\n  766                  storage.setItem(\"favoritos\", JSON.stringify(favoritos));\n  767:                 runtimePopup(\"Favorito\", \"Favorito gravado com sucesso\");\n  768                  $(\".detalhes-favoritar\").text(\"Favoritado\");\n  769                  $(\".detalhes-favotiarimg\").attr(\"src\", \"img/favoritoy.png\");\n  ...\n  837  \n  838          } else {\n  839:             runtimePopup(\"Erro\", \"Não foi possivel obter a rota.\");\n  840          }\n  841      }\n\n/home/paulohsa/Projects/capesesp-mobile/www/js/webview.js:\n   18          }).error(function(){\n   19              $.mobile.loading(\"hide\");\n   20:             runtimePopup(\"Erro\", \"Falha de comunicação. Tente novamente\",false);\n   21          })\n   22      }\n\n63 matches across 18 files\n\n\nSearching 8502 files for \"\"O Matrícula ou senha informados\"\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/bin-version-check:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/dateformat:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/executable:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/find-versions:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/gifsicle:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/jpegtran:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/lpad-align:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/optipng:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/pngquant:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/rc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-bunzip:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-table:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/semver:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-dirs:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-indent:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-json-comments:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n0 matches\n\nSearching 8502 files for \"O Matrícula ou senha informados\"\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/bin-version-check:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/dateformat:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/executable:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/find-versions:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/gifsicle:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/jpegtran:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/lpad-align:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/optipng:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/pngquant:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/rc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-bunzip:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-table:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/semver:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-dirs:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-indent:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-json-comments:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n0 matches\n\nSearching 8502 files for \"Matrícula ou senha informados\"\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/bin-version-check:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/dateformat:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/executable:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/find-versions:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/gifsicle:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/jpegtran:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/lpad-align:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/optipng:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/pngquant:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/rc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-bunzip:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/seek-table:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/semver:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-dirs:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-indent:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/node_modules/.bin/strip-json-comments:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/android/assets/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n/home/paulohsa/Projects/capesesp-mobile/platforms/browser/www/css/.sass-cache/fa836767a0acfd505362d7c63a5ab2ea38219d66/carteirinha.scssc:\n    ERROR: Unable to open file\n\n0 matches",
+			"settings":
+			{
+				"buffer_size": 24494,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "var mainController = function () {\n    var service = dataService();\n    var auth = loginService();\n    var init = function () {\n        document.addEventListener(\"deviceready\", onDeviceReady, false);\n\n        function onDeviceReady() {\n            AndroidFullScreen.immersiveMode();\n            screen.lockOrientation('portrait');\n            if (cordova.recheckScreenOrientation)\n                cordova.recheckScreenOrientation(window.shouldRotateToOrientation, window.shouldRotateToOrientation);\n        }\n\n        $(\"#header-info\").click(function () {\n            if(window.sessionStorage.getItem(\"key\") != \"logado\")\n                $(\".header-logout\").hide();\n            else\n                $(\".header-logout\").show();\n            setTimeout(function(){\n                $.mobile.loading(\"show\");\n                service.chamadaGenericaAjax(configURLLogin.urlRecuperaInformacoes, configURLLogin.dadosVazio, retornoRecuperaInformacoes,function(){\n                    window.location.href='index.html'\n                });\n            },500);\n        });\n\n        $(\"#login\").on(\"input\", function (e) {\n            var lastVal = $(this).data(\"lastval\");\n            if ($(this).data(\"lastval\") != $(this).val() &&\n                (/^[0-9]+$/.test($(this).val()) || $(this).val() == \"\")) {\n                $(this).data(\"lastval\", $(this).val());\n            }\n            else\n                $(this).val(lastVal);\n        });\n    };\n\n\n    var logar = function () {\n        var login = $(\"#login\").val(), senha = $(\"#senha\").val();\n        if (!login || !senha)\n            runtimePopup(\"Login\", \"Favor informar Matrícula e Senha\", true);\n        if (login.length <= 2)\n            runtimePopup(\"Login\", \"Matrícula ou senha inválida\", true);\n        else\n            loginUsuario(login, senha);\n    };\n\n    var loginUsuario = function (usuario, senha) {\n        var usuarioSEmEspaco = usuario.trim();\n        var seq = usuarioSEmEspaco.slice(-2);\n        var login = usuarioSEmEspaco.slice(0,-2);\n        dadosLogin.matricula = login;\n        dadosLogin.sequencial = seq;\n        dadosLogin.senha = senha;\n        dadosLogin.uuid = device.uuid;\n        service.chamadaGenericaAjax(configURLLogin.url, dadosLogin, retornoLoginUsuario);\n    };\n\n\n    var retornoLoginUsuario = function (responseParam) {\n        var storage = window.sessionStorage;\n        $.each(responseParam.statusExecucao.mensagens.mensagem, function (i, item) {\n            if (item.codigo == 2) {\n                configURLLogin.token = responseParam.token;\n                configURLLogin.tipo_dependente = responseParam.tipo_dependente;\n                storage.setItem(\"key\", \"logado\");\n                storage.setItem(\"matricula\", dadosLogin.matricula);\n                storage.setItem(\"sequencial\", dadosLogin.sequencial);\n                storage.setItem(\"token\", configURLLogin.token);\n                storage.setItem(\"tipo_dependente\", configURLLogin.tipo_dependente);\n                $.mobile.loading(\"show\");\n\n                if(configURLLogin.titular && configURLLogin.tipo_dependente != \"T\")\n                {\n                    $.mobile.loading(\"hide\");\n                    runtimePopup(\"Aviso\", \"Somente o titular tem acesso a esta área\", true,function(){\n                        window.location.href = \"index.html\";\n                    });\n                }\n                else\n                    window.location.href = configURLLogin.telaChamada;\n            } else\n            runtimePopup(\"Login\", item.mensagem);\n        });\n};\n\nvar redirectRedeCredenciada = function () {\n    $.mobile.loading(\"show\");\n    window.location.href = \"rede_credenciada.html\";\n\n};\n\nvar CarregarInformacoes = function (url) {\n    window.location.href = url;\n}\n\n\nvar retornoRecuperaInformacoes = function (response) {\n    var storage = window.sessionStorage;\n    storage.setItem(\"infoGeral\",JSON.stringify(response));\n    setTimeout(function(){\n        $.mobile.loading(\"hide\");\n    },500);\n    window.location.href=\"index.html#moreinfo\";\n}\n\nvar logout = function(){\n    runtimePopupConfirm(\"Logout\", \"Deseja fazer logout da aplicação?\",function(){\n        var storage = window.sessionStorage;\n        storage.removeItem(\"key\");\n        storage.removeItem(\"matricula\");\n        storage.removeItem(\"token\");\n        storage.removeItem(\"tipo_dependente\");\n        window.location.href = \"index.html\"\n    });\n}\n\nreturn {\n    init: init,\n    logar: logar,\n    auth: auth,\n    redirectRedeCredenciada: redirectRedeCredenciada,\n    CarregarInformacoes: CarregarInformacoes,\n    retornoRecuperaInformacoes: retornoRecuperaInformacoes,\n    logout:logout\n}\n};\n\nvar mainCtrl = mainController();\n\n$(function () {\n\n    if(window.sessionStorage.getItem(\"key\") != \"logado\")\n        $(\".header-logout\").hide();\n    else\n        $(\".header-logout\").show();\n    \n    document.addEventListener(\"backbutton\", onBackKeyDown, false);\n\n    var initialScreenSize = window.innerHeight;\n    window.addEventListener(\"resize\", function () {\n        if (window.innerHeight < initialScreenSize) {\n            $(\"footer\").hide();\n        } else {\n            $(\"footer\").show();\n        }\n    });\n\n\n    function onBackKeyDown(e) {\n        if($.mobile.activePage.attr('id') == \"pageone\") {\n            e.preventDefault();\n            navigator.app.exitApp();\n        }\n        else\n            window.location.href=\"index.html\";\n\n    }\n\n    mainCtrl.init();\n});",
+			"file": "platforms/android/assets/www/js/main.js",
+			"file_size": 5563,
+			"file_write_time": 131196243733287808,
+			"settings":
+			{
+				"buffer_size": 5396,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,8 +248,16 @@
 			"file": "www/config.xml",
 			"settings":
 			{
-				"buffer_size": 6495,
+				"buffer_size": 6558,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/dao.js",
+			"settings":
+			{
+				"buffer_size": 7099,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -271,7 +308,7 @@
 	[
 		"/home/paulohsa/Projects/capesesp-mobile",
 		"/home/paulohsa/Projects/capesesp-mobile/www",
-		"/home/paulohsa/Projects/capesesp-mobile/www/css"
+		"/home/paulohsa/Projects/capesesp-mobile/www/js"
 	],
 	"file_history":
 	[
@@ -337,7 +374,7 @@
 	],
 	"find":
 	{
-		"height": 76.0
+		"height": 74.0
 	},
 	"find_in_files":
 	{
@@ -352,6 +389,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"android",
+			"carteira_lista_ul",
+			"Matrícula ou senha informados",
+			"O Matrícula ou senha informados",
+			"\"O Matrícula ou senha informados",
+			"runtimePopup(",
+			"senha",
 			"icon",
 			"landscape",
 			"init",
@@ -414,7 +458,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -444,7 +488,7 @@
 						"translation.y": 2764.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -474,7 +518,7 @@
 						"translation.y": 21395.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -483,15 +527,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12437,
+						"buffer_size": 11986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5637,
-								5637
+								1592,
+								1592
 							]
 						],
 						"settings":
@@ -501,7 +545,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3384.0,
+						"translation.y": 563.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -509,6 +553,360 @@
 				},
 				{
 					"buffer": 3,
+					"file": "www/js/loginService.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1660,
+								1660
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24494,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										1965,
+										1978
+									],
+									[
+										2791,
+										2804
+									],
+									[
+										3123,
+										3136
+									],
+									[
+										3508,
+										3521
+									],
+									[
+										3630,
+										3643
+									],
+									[
+										3868,
+										3881
+									],
+									[
+										4179,
+										4192
+									],
+									[
+										4424,
+										4437
+									],
+									[
+										4667,
+										4680
+									],
+									[
+										4919,
+										4932
+									],
+									[
+										5164,
+										5177
+									],
+									[
+										5379,
+										5392
+									],
+									[
+										5541,
+										5554
+									],
+									[
+										5712,
+										5725
+									],
+									[
+										5871,
+										5884
+									],
+									[
+										6034,
+										6047
+									],
+									[
+										6239,
+										6252
+									],
+									[
+										6477,
+										6490
+									],
+									[
+										6708,
+										6721
+									],
+									[
+										6975,
+										6988
+									],
+									[
+										7246,
+										7259
+									],
+									[
+										7623,
+										7636
+									],
+									[
+										8442,
+										8455
+									],
+									[
+										8767,
+										8780
+									],
+									[
+										9145,
+										9158
+									],
+									[
+										9267,
+										9280
+									],
+									[
+										9505,
+										9518
+									],
+									[
+										9816,
+										9829
+									],
+									[
+										10054,
+										10067
+									],
+									[
+										10297,
+										10310
+									],
+									[
+										10549,
+										10562
+									],
+									[
+										10794,
+										10807
+									],
+									[
+										11009,
+										11022
+									],
+									[
+										11171,
+										11184
+									],
+									[
+										11342,
+										11355
+									],
+									[
+										11501,
+										11514
+									],
+									[
+										11664,
+										11677
+									],
+									[
+										11869,
+										11882
+									],
+									[
+										12107,
+										12120
+									],
+									[
+										12338,
+										12351
+									],
+									[
+										12605,
+										12618
+									],
+									[
+										12869,
+										12882
+									],
+									[
+										13058,
+										13071
+									],
+									[
+										13859,
+										13872
+									],
+									[
+										14166,
+										14179
+									],
+									[
+										14526,
+										14539
+									],
+									[
+										14648,
+										14661
+									],
+									[
+										14886,
+										14899
+									],
+									[
+										15197,
+										15210
+									],
+									[
+										15417,
+										15430
+									],
+									[
+										15660,
+										15673
+									],
+									[
+										15912,
+										15925
+									],
+									[
+										16157,
+										16170
+									],
+									[
+										16372,
+										16385
+									],
+									[
+										16534,
+										16547
+									],
+									[
+										16705,
+										16718
+									],
+									[
+										16864,
+										16877
+									],
+									[
+										17027,
+										17040
+									],
+									[
+										17232,
+										17245
+									],
+									[
+										17470,
+										17483
+									],
+									[
+										17701,
+										17714
+									],
+									[
+										17968,
+										17981
+									],
+									[
+										18214,
+										18227
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								22447,
+								22447
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 4,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 15810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "platforms/android/assets/www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3648,
+								3648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1455.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "www/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -534,11 +932,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "www/css/common.css",
 					"semi_transient": false,
 					"settings":
@@ -564,11 +962,11 @@
 						"translation.y": 13551.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "www/css/carteirinha.scss",
 					"semi_transient": false,
 					"settings":
@@ -594,24 +992,24 @@
 						"translation.y": 2011.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "www/config.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6495,
+						"buffer_size": 6558,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5627,
-								5627
+								2431,
+								2431
 							]
 						],
 						"settings":
@@ -621,7 +1019,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2232.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "www/js/dao.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1198,
+								1198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -682,6 +1110,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"dao",
+				"www/js/dao.js"
+			],
 			[
 				"config",
 				"www/config.xml"
@@ -809,7 +1241,7 @@
 		[
 			[
 				"",
-				"~/Projects/capesesp-mobile/www/css/chargers.sublime-project"
+				"~/Projects/meplis-billing-client-frontend/meplis-billing.sublime-project"
 			],
 			[
 				"soc",

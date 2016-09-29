@@ -35,7 +35,7 @@ var carteiraVirtual = function() {
                 text.addClass("ui-first-child");
             else if (i == listaBen.length - 1)
                 text.addClass("ui-last-child");
-
+            $("#carteira_lista_ul").html("");
             $("#carteira_lista_ul").append(text);
             $("#link" + i).text(item.beneficiario.nome).click(function() {
                 listarTipoCarteira(item.beneficiario.seq);
@@ -140,22 +140,11 @@ var carteiraVirtual = function() {
         $(carteirinha_img).attr("hide", "");
 
         carteirinha_img.each(function() {
-            //var carteirinha_tipo = responseParam.plano.abrangencia.replace(/ /g, '').toLowerCase();
             if ($(this).hasClass(planType)) {
                 $(this).removeAttr("hide");
             }
         });
     };
-    //
-    //var flipCarteira = function (verso) {
-    //
-    //
-    //    $(".carteira_lista_detalhe").css("margin-top", "12.65%");
-    //    if (verso)
-    //        $.mobile.changePage("#carteirinhaverso", {changeHash: false, transition: "slide"});
-    //    else
-    //        $.mobile.changePage("#pagetwo", {changeHash: false, transition: "slide"});
-    //};
 
     var init = function() {
         var carteirinha_img = $(".carteirinha__frente--img");
@@ -164,13 +153,12 @@ var carteiraVirtual = function() {
 
         $("#pagetwo").hide();
 
-        $("#pagetwo, #carteirinha__frente, carteirinha__verso").click(function() {
+        $("#pagetwo, #carteirinha__frente, .carteirinha__frente--img, .carteirinha__verso").click(function() {
             var header = $(".header-carteirinha"),
                 detalheCarteira = $(".carteira_lista_detalhe");
             header.toggle();
             if (header.css("display") == "none") {
                 detalheCarteira.css("margin-top", "12.65%");
-                //$("#pagetwo").css("margin-top","2em");
             } else {
                 detalheCarteira.css("margin-top", "1%");
                 $("#pagetwo").css("margin-top", "0");
