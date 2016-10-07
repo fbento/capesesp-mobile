@@ -322,15 +322,16 @@ var redesCredenciadas = function() {
             vazio = false;
             preencheCombo(item.descricao, item.codigo, "servicoList");
         });
-        if (vazio && $('#tiposervicoList').val() > 0 && modalidade != "5") {
+        if (vazio && $('#tiposervicoList').val() > 0 && modalidade != "05") {
             runtimePopup("Rede Credenciada", "Não há serviços para o plano selecionado");
             return;
         }
-        if (!vazio && modalidade != "5") {
+        if (!vazio && modalidade != "05") {
             $("#servicoLabel").text(responseParam.label);
             $("#servicoDiv").css("display", "block");
         }
-        if (vazio && modalidade == "5") {
+        if (vazio && modalidade == "05") {
+            $("#prosseguir2").show();
             $("#botaoBusca").unbind('click').click(function() {
                 listarCredenciados()
             });
@@ -339,6 +340,8 @@ var redesCredenciadas = function() {
         configURLLogin.codEspAtend = responseParam.codigo;
 
         var elServList = $("#servicoList");
+
+
         if (elServList.val())
             elServList.removeAttr("disabled");
         if (!vazio || !configURLLogin.exibeTipoServico)
@@ -400,6 +403,9 @@ var redesCredenciadas = function() {
             return true;
     }
 
+    function checkIfSpecialityIsNull(select) {
+        console.log(select);
+    }
 
     function selecionarEspecialidade(param) {
         var x = $("#tipoServicoDiv");
@@ -911,6 +917,7 @@ var redesCredenciadas = function() {
         listarTipoServico: listarTipoServico,
         listarServico: listarServico,
         listarDetalhe: listarDetalhe,
+        checkIfSpecialityIsNull: checkIfSpecialityIsNull,
         selecionarEspecialidade: selecionarEspecialidade,
         call: call,
         obterEndereco: obterEndereco,

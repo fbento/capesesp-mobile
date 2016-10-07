@@ -29,13 +29,13 @@ var carteiraVirtual = function() {
         $("#pageone .backBtn").hide();
         $("#pageone .homeBtn").show();
 
+        $("#carteira_lista_ul").html("");
         $.each(listaBen, function(i, item) {
             var text = $("<li><a href='#' id='link" + i + "'></a></li>");
             if (i == 0)
                 text.addClass("ui-first-child");
             else if (i == listaBen.length - 1)
                 text.addClass("ui-last-child");
-            $("#carteira_lista_ul").html("");
             $("#carteira_lista_ul").append(text);
             $("#link" + i).text(item.beneficiario.nome).click(function() {
                 listarTipoCarteira(item.beneficiario.seq);

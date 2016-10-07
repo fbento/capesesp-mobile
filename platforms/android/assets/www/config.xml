@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.capesesp.mobile" version="1.0.32" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.capesesp.mobile" version="1.0.33" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Capesesp</name>
     <description>
         Capesesp mobile app.
@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     
-    <preference name="android-versionCode" value="2232" />
+    <preference name="android-versionCode" value="2233" />
     <preference name="splashscreen" value="logo" />
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="cli-6.1.0" />
@@ -44,7 +44,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
-        <string>132</string>
+        <string>133</string>
     </gap:config-file>
 
     <icon src="icon.png" />
