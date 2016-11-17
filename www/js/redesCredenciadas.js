@@ -589,12 +589,12 @@ var redesCredenciadas = function() {
         if (responseParam.credenciados.telefones != null && responseParam.credenciados.telefones.length > 0) {
             var objeto = responseParam.credenciados.telefones[0];
             var x = document.getElementById("telCredenciado");
-            x.value = objeto.ddd + "" + objeto.fixo;
+            x.value = objeto.ddd.replace(/^0+/, ''); + "" + objeto.fixo;
             x.value = x.value.substring(1);
         }
         var tel = "";
         $.each(responseParam.credenciados.telefones, function(i, item) {
-            tel += "(" + item.ddd + ")" + item.fixo + " ";
+            tel += "(" + item.ddd.replace(/^0+/, ''); + ")" + item.fixo + " ";
         });
         $("#tel").html(tel + "<span style='color:white !important'>.</span>");
         if ($("#tel").text() == "") {

@@ -12,16 +12,16 @@ var mainController = function () {
         }
 
         $("#header-info").click(function () {
-            if(window.sessionStorage.getItem("key") != "logado")
+            if (window.sessionStorage.getItem("key") != "logado")
                 $(".header-logout").hide();
             else
                 $(".header-logout").show();
-            setTimeout(function(){
+            setTimeout(function () {
                 $.mobile.loading("show");
-                service.chamadaGenericaAjax(configURLLogin.urlRecuperaInformacoes, configURLLogin.dadosVazio, retornoRecuperaInformacoes,function(){
-                    window.location.href='index.html'
+                service.chamadaGenericaAjax(configURLLogin.urlRecuperaInformacoes, configURLLogin.dadosVazio, retornoRecuperaInformacoes, function () {
+                    window.location.href = 'index.html'
                 });
-            },500);
+            }, 500);
         });
 
         $("#login").on("input", function (e) {
@@ -49,11 +49,12 @@ var mainController = function () {
     var loginUsuario = function (usuario, senha) {
         var usuarioSEmEspaco = usuario.trim();
         var seq = usuarioSEmEspaco.slice(-2);
-        var login = usuarioSEmEspaco.slice(0,-2);
+        var login = usuarioSEmEspaco.slice(0, -2);
         dadosLogin.matricula = login;
         dadosLogin.sequencial = seq;
         dadosLogin.senha = senha;
-        dadosLogin.uuid = device.uuid;
+        if (device != undefined)
+            dadosLogin.uuid = device.uuid;
         service.chamadaGenericaAjax(configURLLogin.url, dadosLogin, retornoLoginUsuario);
     };
 
@@ -71,71 +72,70 @@ var mainController = function () {
                 storage.setItem("tipo_dependente", configURLLogin.tipo_dependente);
                 $.mobile.loading("show");
 
-                if(configURLLogin.titular && configURLLogin.tipo_dependente != "T")
-                {
+                if (configURLLogin.titular && configURLLogin.tipo_dependente != "T") {
                     $.mobile.loading("hide");
-                    runtimePopup("Aviso", "Somente o titular tem acesso a esta área", true,function(){
+                    runtimePopup("Aviso", "Somente o titular tem acesso a esta área", true, function () {
                         window.location.href = "index.html";
                     });
                 }
                 else
                     window.location.href = configURLLogin.telaChamada;
             } else
-            runtimePopup("Login", item.mensagem);
+                runtimePopup("Login", item.mensagem);
         });
-};
+    };
 
-var redirectRedeCredenciada = function () {
-    $.mobile.loading("show");
-    window.location.href = "rede_credenciada.html";
+    var redirectRedeCredenciada = function () {
+        $.mobile.loading("show");
+        window.location.href = "rede_credenciada.html";
 
-};
+    };
 
-var CarregarInformacoes = function (url) {
-    window.location.href = url;
-}
+    var CarregarInformacoes = function (url) {
+        window.location.href = url;
+    }
 
 
-var retornoRecuperaInformacoes = function (response) {
-    var storage = window.sessionStorage;
-    storage.setItem("infoGeral",JSON.stringify(response));
-    setTimeout(function(){
-        $.mobile.loading("hide");
-    },500);
-    window.location.href="index.html#moreinfo";
-}
-
-var logout = function(){
-    runtimePopupConfirm("Logout", "Deseja fazer logout da aplicação?",function(){
+    var retornoRecuperaInformacoes = function (response) {
         var storage = window.sessionStorage;
-        storage.removeItem("key");
-        storage.removeItem("matricula");
-        storage.removeItem("token");
-        storage.removeItem("tipo_dependente");
-        window.location.href = "index.html"
-    });
-}
+        storage.setItem("infoGeral", JSON.stringify(response));
+        setTimeout(function () {
+            $.mobile.loading("hide");
+        }, 500);
+        window.location.href = "index.html#moreinfo";
+    }
 
-return {
-    init: init,
-    logar: logar,
-    auth: auth,
-    redirectRedeCredenciada: redirectRedeCredenciada,
-    CarregarInformacoes: CarregarInformacoes,
-    retornoRecuperaInformacoes: retornoRecuperaInformacoes,
-    logout:logout
-}
+    var logout = function () {
+        runtimePopupConfirm("Logout", "Deseja fazer logout da aplicação?", function () {
+            var storage = window.sessionStorage;
+            storage.removeItem("key");
+            storage.removeItem("matricula");
+            storage.removeItem("token");
+            storage.removeItem("tipo_dependente");
+            window.location.href = "index.html"
+        });
+    }
+
+    return {
+        init: init,
+        logar: logar,
+        auth: auth,
+        redirectRedeCredenciada: redirectRedeCredenciada,
+        CarregarInformacoes: CarregarInformacoes,
+        retornoRecuperaInformacoes: retornoRecuperaInformacoes,
+        logout: logout
+    }
 };
 
 var mainCtrl = mainController();
 
 $(function () {
 
-    if(window.sessionStorage.getItem("key") != "logado")
+    if (window.sessionStorage.getItem("key") != "logado")
         $(".header-logout").hide();
     else
         $(".header-logout").show();
-    
+
     document.addEventListener("backbutton", onBackKeyDown, false);
 
     var initialScreenSize = window.innerHeight;
@@ -149,12 +149,12 @@ $(function () {
 
 
     function onBackKeyDown(e) {
-        if($.mobile.activePage.attr('id') == "pageone") {
+        if ($.mobile.activePage.attr('id') == "pageone") {
             e.preventDefault();
             navigator.app.exitApp();
         }
         else
-            window.location.href="index.html";
+            window.location.href = "index.html";
 
     }
 
