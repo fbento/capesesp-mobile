@@ -476,7 +476,7 @@ var redesCredenciadas = function() {
             var telefones = "";
 
             $.each(item.telefones, function(j, obj) {
-                telefones += "(" + obj.ddd + ")" + obj.fixo + ",  ";
+                telefones += "(" + obj.ddd.replace(/^0+/, ''); + ")" + obj.fixo + ",  ";
             });
 
             var telefonesClean = telefones.trim();
