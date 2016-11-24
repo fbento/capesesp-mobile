@@ -1,6 +1,6 @@
 //https://webservicesh.capesesp.com.br/capesesp-apis-v1.1/ws/
-var hostApi = "https://webservicesh.capesesp.com.br/";
-var apiBaseUrl = hostApi + "capesesp-apis-v1.1/ws/";
+var hostApi ="https://webservicesh.capesesp.com.br/"; // "https://webservicesh.capesesp.com.br/";
+var apiBaseUrl = hostApi + "capesesp-apis-v1.2/ws/"; // "capesesp-apis-v1.1/ws/";
 var urlRedeCredenciada = apiBaseUrl + "redecredenciada/";
 
 var configURLLogin = {

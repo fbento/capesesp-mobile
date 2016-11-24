@@ -9,7 +9,7 @@ var buildBase = './build/app/',
     pluginsFolder = './plugins/**/*.*',
     appFolder = './www/**/*.*',
     buildZip = './build',
-    pathPhoneGapBuild = 'C:/Quality/Projetos/Capesesp/Projeto_CAPESESP_Mobile/trunk/04_CONSTRUCAO/build/phonegapbuild/PhonegapBuild';
+    pathPhoneGapBuild = 'C:/Deploy';
 
 
 gulp.task('copyConfig', function () {

@@ -1,10 +1,10 @@
 var generateRota;
 
 var rotas = rotasGoogle();
-$(function() {
+$(function () {
     $.mobile.loading("show");
     var initialScreenSize = window.innerHeight;
-    window.addEventListener("resize", function() {
+    window.addEventListener("resize", function () {
         if (window.innerHeight < initialScreenSize)
             $("footer").hide();
         else
@@ -29,7 +29,7 @@ $(function() {
             cordova.recheckScreenOrientation(window.shouldRotateToOrientation, window.shouldRotateToOrientation);
         $("#tabs").tabs();
         redesCtrl.AtivarTab(0, [1, 2, 3]);
-        $("#bairro").on("input", function(e) {
+        $("#bairro").on("input", function (e) {
             var lastVal = $(this).data("lastval");
             if ($(this).data("lastval") != $(this).val() &&
                 (/^[a-zA-Z\s]+$/.test($(this).val()) || $(this).val() == "")) {
@@ -65,7 +65,7 @@ $(function() {
 
 });
 
-Array.prototype.remove = function(value) {
+Array.prototype.remove = function (value) {
     var idx = this.indexOf(value);
     if (idx != -1) {
         return this.splice(idx, 1); // The second parameter is the number of elements to remove.
@@ -82,13 +82,13 @@ function pad(number, length) {
 }
 
 
-var redesCredenciadas = function() {
+var redesCredenciadas = function () {
     var service = dataService();
     var useGps = false;
 
-    var listarPlanos = function() {
+    var listarPlanos = function () {
         service.chamadaGenericaAjax(configURLLogin.urlPlanos, configURLLogin.dadosVazio, retornoPlanos,
-            function() {
+            function () {
                 window.localtion.href = "index.html"
             },
             true);
@@ -129,16 +129,16 @@ var redesCredenciadas = function() {
         x.trigger("change")
     }
 
-    var retornoPlanos = function(responseParam) {
+    var retornoPlanos = function (responseParam) {
         var tamLista = responseParam.planos.length;
-        $.each(responseParam.planos, function(i, item) {
+        $.each(responseParam.planos, function (i, item) {
 
             var el = $("<li><a href='#' class='li-tab ui-btn ui-btn-icon-right ui-icon-carat-r' >" + item.plano.descricao + "</a></li>");
             if (i == 0)
                 el.addClass("ui-first-child");
             else if (i == tamLista - 1)
                 el.addClass("ui-last-child");
-            el.find("a").click(function(e) {
+            el.find("a").click(function (e) {
                 sessionStorage.setItem("planoSelecionado", JSON.stringify(item.plano));
                 listarEstados(e.target, item.plano.codigoANS, item.plano.exibeUrgEmer, item.plano.exibeTipoServico);
             });
@@ -147,10 +147,10 @@ var redesCredenciadas = function() {
 
             $(".planos-redes").css("overflow-y", "scroll")
         });
-        var hideLoad = setInterval(function() {
+        var hideLoad = setInterval(function () {
             $.mobile.loading("hide");
         }, 500);
-        setTimeout(function() {
+        setTimeout(function () {
             clearInterval(hideLoad);
         }, 3000);
     };
@@ -162,7 +162,7 @@ var redesCredenciadas = function() {
             $("#header-back").hide();
         else
             $("#header-back").show();
-        $.each($(".tab-capesesp"), function(c, v) {
+        $.each($(".tab-capesesp"), function (c, v) {
             $(v).parent("li").removeClass("tab-selected")
         });
         $("#tabs").tabs("option", {
@@ -205,7 +205,7 @@ var redesCredenciadas = function() {
         dadosListaCredenciados.descMunicipio = "";
         dadosListaCredenciados.descBairro = "";
 
-        $.each(responseParam.estados, function(i, item) {
+        $.each(responseParam.estados, function (i, item) {
             preencheCombo(item.descricao, item.sigla, "estadoList");
         });
         selecionaItemCombo("estadoList");
@@ -243,7 +243,7 @@ var redesCredenciadas = function() {
         } else
             useGps = false;
 
-        $.each(responseParam.municipios, function(i, item) {
+        $.each(responseParam.municipios, function (i, item) {
             preencheCombo(item.municipio, item.municipio, "municipioList");
         });
         selecionaItemCombo("municipioList");
@@ -255,18 +255,18 @@ var redesCredenciadas = function() {
 
         var muniEl = $("#municipioList");
         if ($("#tipoServicoDiv").css("display") == "none") {
-            muniEl.removeAttr("onchange").bind("change", function() {
+            muniEl.removeAttr("onchange").bind("change", function () {
                 listarServico('1')
             });
             $("#servicoList").removeAttr("disabled");
         } else {
             muniEl.removeAttr("onchange");
-            muniEl.bind("change", function() {
+            muniEl.bind("change", function () {
                 if (isEstadoSelected()) {
-                    $(prosseguir1).show().focus().unbind('click').click(function() {
+                    $(prosseguir1).show().focus().unbind('click').click(function () {
                         if (!configURLLogin.exibeTipoServico) {
                             $("#tipoServicoDiv").css("display", "none");
-                            listarServico(0, function() {
+                            listarServico(0, function () {
                                 AtivarTab(2, [3]);
                             });
                         } else {
@@ -304,7 +304,7 @@ var redesCredenciadas = function() {
         configURLLogin.dadosServicos.codModalidade = modalidade;
         if (callback)
             service.chamadaGenericaAjax(configURLLogin.urlServico, configURLLogin.dadosServicos,
-                function(response) {
+                function (response) {
                     retornoServico(response);
                     callback();
                 });
@@ -318,7 +318,7 @@ var redesCredenciadas = function() {
 
         var vazio = true;
         var modalidade = configURLLogin.dadosServicos.codModalidade;
-        $.each(responseParam.servicos, function(i, item) {
+        $.each(responseParam.servicos, function (i, item) {
             vazio = false;
             preencheCombo(item.descricao, item.codigo, "servicoList");
         });
@@ -331,7 +331,7 @@ var redesCredenciadas = function() {
             $("#servicoDiv").css("display", "block");
         }
         if (vazio && modalidade == "5") {
-            $("#botaoBusca").unbind('click').click(function() {
+            $("#botaoBusca").unbind('click').click(function () {
                 listarCredenciados()
             });
             $("#botaoBusca").hide();
@@ -346,13 +346,13 @@ var redesCredenciadas = function() {
         else
             $(".esp-servico").css("display", "none");
         if (isServicoSelected() || !configURLLogin.exibeTipoServico) {
-            $(prosseguir2).focus().unbind('click').click(function() {
+            $(prosseguir2).focus().unbind('click').click(function () {
 
                 AtivarTab(3, []);
 
                 $("#botaoBusca").show();
 
-                $("#botaoBusca").unbind('click').click(function() {
+                $("#botaoBusca").unbind('click').click(function () {
                     listarCredenciados();
                 });
             })
@@ -378,7 +378,7 @@ var redesCredenciadas = function() {
         limpaCombo("tiposervicoList");
         $("#prosseguir2").hide();
         dadosListaCredenciados.codEspecialidade = "";
-        $.each(responseParam.modalidades, function(i, item) {
+        $.each(responseParam.modalidades, function (i, item) {
             preencheCombo(item.descricao, item.codigo, "tiposervicoList");
         });
 
@@ -411,7 +411,7 @@ var redesCredenciadas = function() {
         if ((x.css("display") == "block" && $("#tiposervicoList").find("option:selected").val() == "0") || $("#servicoList option:selected").val() == "0" || $(".esp-servico").css("display") == "none")
             return;
 
-        $("#botaoBusca").unbind('click').click(function() {
+        $("#botaoBusca").unbind('click').click(function () {
             AtivarTab(3, []);
             listarCredenciados();
         });
@@ -462,12 +462,12 @@ var redesCredenciadas = function() {
         $("input[name='lngs']").remove();
         $("input[name='cpfs']").remove();
         $("input[name='seqs']").remove();
-        $.each(ultimosCredenciados.credenciados, function(i, item) {
+        $.each(ultimosCredenciados.credenciados, function (i, item) {
             vazio = false;
             var credDiv = $("<div class='lista-pai'></div>")
                 .attr({ id: "" + item.cpfCnpj })
                 .appendTo("#lista-wrapper").unbind('click')
-                .click(function() {
+                .click(function () {
                     listarDetalhe(item.cpfCnpj, item.sequencial);
                 });
 
@@ -475,7 +475,7 @@ var redesCredenciadas = function() {
 
             var telefones = "";
 
-            $.each(item.telefones, function(j, obj) {
+            $.each(item.telefones, function (j, obj) {
                 telefones += "(" + obj.ddd.replace(/^0+/, ''); + ")" + obj.fixo + ",  ";
             });
 
@@ -514,9 +514,9 @@ var redesCredenciadas = function() {
     }
 
 
-    var RemoveTableRow = function(handler) {
+    var RemoveTableRow = function (handler) {
         var tr = handler.closest('tr');
-        tr.fadeOut(400, function() {
+        tr.fadeOut(400, function () {
             tr.remove();
         });
     };
@@ -538,14 +538,14 @@ var redesCredenciadas = function() {
         if (listaContemValorFav(favoritos, valorCpf, valorSeq)) {
             $(".detalhes-favoritar").text("Favoritado");
             $(".detalhes-favotiarimg").attr("src", "img/favoritoy.png");
-            $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function() {
+            $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function () {
                 apagarFavorito($("#cpfCredenciado").val(), $("#seqCredenciado").val(), true);
             });
 
         } else {
             $(".detalhes-favoritar").text("Favoritar");
             $(".detalhes-favotiarimg").attr("src", "img/favoritog.png");
-            $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function() {
+            $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function () {
                 gravarCredenciadoFavorito();
             });
         }
@@ -593,7 +593,7 @@ var redesCredenciadas = function() {
             x.value = x.value.substring(1);
         }
         var tel = "";
-        $.each(responseParam.credenciados.telefones, function(i, item) {
+        $.each(responseParam.credenciados.telefones, function (i, item) {
             tel += "(" + item.ddd.replace(/^0+/, ''); + ")" + item.fixo + " ";
         });
         $("#tel").html(tel + "<span style='color:white !important'>.</span>");
@@ -611,6 +611,11 @@ var redesCredenciadas = function() {
         $("#atualizado").text(testaNulo(convertDate(responseParam.credenciados.ultimaAlteracao)));
         if ($("#atualizado").text() == "") {
             RemoveTableRow($("#atualizado"));
+        }
+
+        $("#complemento").text(testaNulo(convertDate(responseParam.credenciados.complemento)));
+        if ($("#complemento").text() == "") {
+            RemoveTableRow($("#complemento"));
         }
 
         function fillEspecialization() {
@@ -635,7 +640,7 @@ var redesCredenciadas = function() {
         $("#lat").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lat));
         $("#lng").text(testaNulo(responseParam.credenciados.endereco.georreferenciamento.lng));
         $("#imgQualifi").children().remove();
-        $.each(responseParam.credenciados.qualificacao, function(j, obj) {
+        $.each(responseParam.credenciados.qualificacao, function (j, obj) {
             var qualif = $("<img src='img/" + obj.codEntidade + ".png' alt='Home' width='18' height='20'>");
             $("#imgQualifi").append(qualif);
         });
@@ -660,7 +665,7 @@ var redesCredenciadas = function() {
         var itemFavorito = $("<div>")
             .attr("data-role", "collapsible")
             .appendTo("#listaFav")
-            .click(function(e) {
+            .click(function (e) {
                 if ($(e.target).text() != "Remover")
                     listarDetalhe(favorito.cpf, favorito.seq);
 
@@ -674,7 +679,7 @@ var redesCredenciadas = function() {
 
         $("<a href='#' data-role='button' data-inline='true' data-icon='delete' data-position='right' style='color:white' >Remover</a>")
             .appendTo(itemFavorito)
-            .click(function(e) {
+            .click(function (e) {
                 apagarFavorito(favorito.cpf, favorito.seq);
             });
         $("#listaFav").trigger("create");
@@ -716,7 +721,7 @@ var redesCredenciadas = function() {
         if (responseParam.statusExecucao.executadoCorretamente) {
             var pos = responseParam.posicionamento.endereco;
             $("#estadoList").val(pos.estado.sigla).selectmenu('refresh', true);
-            $("#estadoList").change(function() {
+            $("#estadoList").change(function () {
                 dadosListaCredenciados.siglaEstado = pos.estado.sigla;
                 dadosListaCredenciados.descMunicipio = pos.municipio;
                 dadosListaCredenciados.descBairro = pos.bairro;
@@ -767,7 +772,7 @@ var redesCredenciadas = function() {
                 runtimePopup("Favorito", "Favorito gravado com sucesso");
                 $(".detalhes-favoritar").text("Favoritado");
                 $(".detalhes-favotiarimg").attr("src", "img/favoritoy.png");
-                $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function() {
+                $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function () {
                     apagarFavorito($("#cpfCredenciado").val(), $("#seqCredenciado").val(), true);
                 });
             }
@@ -795,7 +800,7 @@ var redesCredenciadas = function() {
             else {
                 $(".detalhes-favoritar").text("Favoritar");
                 $(".detalhes-favotiarimg").attr("src", "img/favoritog.png");
-                $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function() {
+                $("#detalhes-favoritar").removeAttr('onclick').unbind('click').click(function () {
                     gravarCredenciadoFavorito();
                 });
                 var listaFavsColap = $(".ui-collapsible-content a");
@@ -890,13 +895,13 @@ var redesCredenciadas = function() {
         generateRota = false;
     }
 
-    var performTabBack = function() {
+    var performTabBack = function () {
 
         var tabs = [1, 2, 3];
 
         var tabAnterior = parseInt($("#tabs div[aria-expanded=true]").attr("aria-labelledby").substring("3") - 1);
         if (tabAnterior >= 0) {
-            AtivarTab(tabAnterior, tabs.filter(function(x) {
+            AtivarTab(tabAnterior, tabs.filter(function (x) {
                 return x > tabAnterior
             }));
         } else
